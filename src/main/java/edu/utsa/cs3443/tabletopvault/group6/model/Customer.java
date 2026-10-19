@@ -43,19 +43,18 @@ public class Customer {
         this.customerNotes = customerNotes;
     }
 
+    @Override
+
+    public String toString() {
+        return getFullName() + " | " +
+                getEmail() + " | " +
+                getPhoneNumber() + " | " +
+                getPreferredContact() + " | " +
+                getCustomerNotes();
+    }
+
+    }
 
 
 
 
-    //@Override
-
-
-
-
-
-
-
-
-
-
-}
