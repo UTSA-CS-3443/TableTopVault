@@ -24,8 +24,33 @@ public class Game {
     }
 
     //getters
+    public String getGameTitle() {return gameTitle;}
+    public int getMinPlayers() {return minPlayers;}
+    public int getMaxPlayers() {return maxPlayers;}
+    public String getCategory() {return category;}
+    public boolean isAvailable() {return available;}
+    public String getGameNotes() {return gameNotes;}
+
+
+
 
     //setters
+    public void setGameTitle(String gameTitle) {this.gameTitle = gameTitle;}
+    public void setMinPlayers(int minPlayers) {this.minPlayers = minPlayers;}
+    public void setMaxPlayers(int maxPlayers) {this.maxPlayers = maxPlayers;}
+    public void setCategory(String category) {this.category = category;}
+    public void setAvailable(boolean available) {this.available = available;}
+    public void setGameNotes(String gameNotes) {this.gameNotes = gameNotes;}
 
-    //@Override
+
+    @Override
+
+    public String toString() {
+        return getGameTitle() + " | " +
+                getMinPlayers() + " | " +
+                getMaxPlayers() + " | " +
+                getCategory() + " | " +
+                isAvailable() + " | " +
+                getGameNotes();
+    }
 }
