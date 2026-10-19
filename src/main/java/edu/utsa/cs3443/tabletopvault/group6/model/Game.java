@@ -4,18 +4,22 @@ public class Game {
 
     //fields
     private String gameTitle;
-    private String playerCount;
+    private int minPlayers;
+    private int maxPlayers;
     private String category;
     private boolean available;
+    private String gameNotes;
 
 
 
     //constructor
-    public Game(String gameTitle, String playerCount, String category, boolean available) {
+    public Game(String gameTitle, int minPlayers, int maxPlayers, String category, boolean available, String gameNotes) {
         this.gameTitle = gameTitle;
-        this.playerCount = playerCount;
+        this.minPlayers = minPlayers;
+        this.maxPlayers = maxPlayers;
         this.category = category;
         this.available = available;
+        this.gameNotes =  gameNotes;
 
     }
 
