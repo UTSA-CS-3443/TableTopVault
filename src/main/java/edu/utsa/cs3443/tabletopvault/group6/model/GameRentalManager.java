@@ -7,10 +7,12 @@ public class GameRentalManager {
 
     private ArrayList<Customer> customersDataList; //array hold customers
     private ArrayList<Game> gamesDataList;  //array hold games
+    private ArrayList<Rental> rentalDataList;
 
     public GameRentalManager() {
         customersDataList = new ArrayList<>();
         gamesDataList = new ArrayList<>();
+        rentalDataList = new ArrayList<>();
     }
 
     /**
@@ -20,8 +22,8 @@ public class GameRentalManager {
     public String showGameList() {
         String result = "";
 
-        result += "Game Title | Min Players | Max Players | Category | Available | Notes\n "
-                ;
+        result += "Game Title | Min Players | Max Players | Category | Available | Game Notes\n ";
+
 
 
         for (int i = 0; i < gamesDataList.size(); i++) {
@@ -33,29 +35,28 @@ public class GameRentalManager {
     }
 
 
+    public String showCustomerList() {
+        String result = "";
+        result += "Full Name | Email | Phone Number | Preferred Contact | Customer Notes\n";
+
+        for (int i = 0; i < customersDataList.size(); i++) {
+            result += customersDataList.get(i).toString();
+            result += "\n";
+        }
+        return result;
+    }
+
+
+
     /**
      * method for showCustomerList()
      * @return
      */
 
 
-    public String showCustomerList() {
-        String result = "";
-
-        for (int i = 0; i < customersDataList.size(); i++) {
-            result += customersDataList.get(i).toString();
-            result += "\n";
-        }
-
-        return result;
-    }
 
 
 
-
-    private final String gamesDataFilename = "data/games";
-    private Customer currentCustomer;
-    private Game currentGame;
 
 
 
@@ -251,6 +252,23 @@ public void addCustomer(Customer customer){
     }
 
 
+    public void loadCustomersDataFromFile() throws FileNotFoundException {
+
+        File file = new File("data/customers");
+        Scanner scan = new Scanner(file);
+
+
+
+        while (scan.hasNextLine()) {
+            String line = scan.nextLine();
+            Customer customer = convertLineToCustomer(line);
+            addCustomer(customer);
+        }
+
+        scan.close();
+    }
+
+    public ArrayList<Customer> getCustomersList() {return customersDataList; }
 
     /**
      * A findAidShip() method, which takes a string representing the registration number of an aid ship,
@@ -400,6 +418,8 @@ public void addCustomer(Customer customer){
             this.customersDataList = customerDataList;
         }
     }
+
+
 
 
 }
