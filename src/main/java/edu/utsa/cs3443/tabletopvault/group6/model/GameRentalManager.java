@@ -1,573 +1,261 @@
 package edu.utsa.cs3443.tabletopvault.group6.model;
-import java.time.LocalDate;
-import java.util.Scanner;
-import java.util.ArrayList;
-import java.io.*;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.time.LocalDate;
+import java.util.ArrayList;
+
+/**
+ * Java Notes:
+ * - Acts as the core service layer enforcing separation of concerns between presentation and data.
+ * - Implements immediate disk synchronization via java.io.PrintWriter and java.io.FileWriter upon state mutation.
+ */
 public class GameRentalManager {
 
-    private ArrayList<Customer> customersDataList; //array hold customers.txt
-    private ArrayList<Game> gamesDataList;  //array hold games.txt
-    private ArrayList<Rental> rentalDataList;
+    private ArrayList<Game> games;
+    private ArrayList<Customer> customers;
+    private ArrayList<Rental> rentals;
+    private ArrayList<Staff> staffList;
 
     public GameRentalManager() {
-        customersDataList = new ArrayList<>();
-        gamesDataList = new ArrayList<>();
-        rentalDataList = new ArrayList<>();
+        this.games = new ArrayList<>();
+        this.customers = new ArrayList<>();
+        this.rentals = new ArrayList<>();
+        this.staffList = new ArrayList<>();
     }
 
-
-
-
-    /**
-     * methods for showGameList()
-     * @return
-     */
-    public String showGameList() {
-        String result = "";
-        result += "Game Title | Min Players | Max Players | Category | Available | Game Notes\n ";
-
-        for (int i = 0; i < gamesDataList.size(); i++) {
-            result += gamesDataList.get(i).toString();
-            result += "\n";
-        }
-
-        return result;
+    public void loadAllData() {
+        loadGames();
+        loadCustomers();
+        loadRentals();
+        loadStaff();
     }
 
-
-
-
-
-
-
-
-    public String showCustomerList() {
-        String result = "";
-        result += "Full Name | Email | Phone Number | Preferred Contact | Customer Notes\n";
-
-        for (int i = 0; i < customersDataList.size(); i++) {
-            result += customersDataList.get(i).toString();
-            result += "\n";
-        }
-        return result;
-
-
-
-
-
-
-
-
-    }
-    public String showRentalList() {
-        String result = "";
-        result += "Game Title | Customer Name | Checkout Date | Return Date | Returned\n";
-        for (int i = 0; i < rentalDataList.size(); i++) {
-            result += rentalDataList.get(i).toString();
-            result += "\n";
-        }
-        return result;
-    }
-
-
-
-
-
-
-
-
-
-//////////////////////////////////////////////////////////////////////////////////////////
-    ///////////////////////////////Game methods\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-    /// .//////////////////////////////////////////////////////////////////////////////////
-
-    public void addGame(Game game) {
-        if(game != null) {
-            gamesDataList.add(game);
+    public void loadGames() {
+        games.clear();
+        try (BufferedReader br = new BufferedReader(new FileReader("data/games.txt"))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                String[] parts = line.split(",");
+                if (parts.length >= 6) {
+                    String title = parts[0].trim();
+                    int min = Integer.parseInt(parts[1].trim());
+                    int max = Integer.parseInt(parts[2].trim());
+                    String category = parts[3].trim();
+                    boolean available = Boolean.parseBoolean(parts[4].trim());
+                    String notes = parts[5].trim();
+                    games.add(new Game(title, min, max, category, available, notes));
+                }
+            }
+        } catch (IOException e) {
+            System.out.println("Note: Could not load games.txt or file is empty.");
         }
     }
 
-
-    /**loadGames() method
-     *
-     * @throws FileNotFoundException
-     */
-    public void loadGamesDataFromFile() throws FileNotFoundException {
-
-        File file = new File("data/games.txt");
-        Scanner scan = new Scanner(file);
-
-
-
-        while (scan.hasNextLine()) {
-            String line = scan.nextLine();
-            Game game = convertLineToGame(line);
-            addGame(game);
+    public void loadCustomers() {
+        customers.clear();
+        try (BufferedReader br = new BufferedReader(new FileReader("data/customers.txt"))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                String[] parts = line.split(",");
+                if (parts.length >= 5) {
+                    String name = parts[0].trim();
+                    String email = parts[1].trim();
+                    String phone = parts[2].trim();
+                    String pref = parts[3].trim();
+                    String notes = parts[4].trim();
+                    customers.add(new Customer(name, email, phone, pref, notes));
+                }
+            }
+        } catch (IOException e) {
+            System.out.println("Note: Could not load customers.txt or file is empty.");
         }
-
-        scan.close();
     }
 
-    /**
-     *
-     * @return
-     */
+    public void loadRentals() {
+        rentals.clear();
+        try (BufferedReader br = new BufferedReader(new FileReader("data/rentals.txt"))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                String[] parts = line.split(",");
+                if (parts.length >= 5) {
+                    String gameTitle = parts[0].trim();
+                    String custName = parts[1].trim();
+                    LocalDate checkoutDate = LocalDate.parse(parts[2].trim());
+                    LocalDate returnDate = parts[3].trim().equals("Not returned") ? null : LocalDate.parse(parts[3].trim());
+                    boolean returned = Boolean.parseBoolean(parts[4].trim());
 
-    public ArrayList<Game> getGamesList() {return gamesDataList; }
+                    Game matchingGame = findGameByTitle(gameTitle);
+                    Customer matchingCust = findCustomerByName(custName);
 
+                    if (matchingGame != null && matchingCust != null) {
+                        rentals.add(new Rental(matchingGame, matchingCust, checkoutDate, returnDate, returned));
+                    }
+                }
+            }
+        } catch (IOException e) {
+            System.out.println("Note: Could not load rentals.txt or file is empty.");
+        }
+    }
 
-    public Game findGame(String gameTitle){
-        for(int i=0;i<gamesDataList.size();i++){
-            Game game = gamesDataList.get(i);
-            if(game.getGameTitle().equalsIgnoreCase(String.valueOf(gameTitle))){
-                return game;
+    public void loadStaff() {
+        staffList.clear();
+        try (BufferedReader br = new BufferedReader(new FileReader("data/staff.txt"))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                String[] parts = line.split(",");
+                if (parts.length >= 5) {
+                    String name = parts[0].trim();
+                    String email = parts[1].trim();
+                    String phone = parts[2].trim();
+                    String username = parts[3].trim();
+                    String passHash = parts[4].trim();
+                    staffList.add(new Staff(name, email, phone, username, passHash));
+                }
+            }
+        } catch (IOException e) {
+            System.out.println("Note: Could not load staff.txt or file is empty.");
+        }
+    }
+
+    public Game findGameByTitle(String title) {
+        for (Game g : games) {
+            if (g.getGameTitle().equalsIgnoreCase(title.trim())) {
+                return g;
             }
         }
         return null;
     }
 
-    /**
-     * updateGame method
-     * @param differentGame
-     * @return
-     * @throws IOException
-     */
-
-    public boolean updateGame(Game differentGame) throws IOException{
-        if(differentGame == null) {
-            return false;
+    public Customer findCustomerByName(String name) {
+        for (Customer c : customers) {
+            if (c.getFullName().equalsIgnoreCase(name.trim())) {
+                return c;
+            }
         }
-        for(int i=0;i<gamesDataList.size();i++){
-            Game game = gamesDataList.get(i);
-            if(game.getGameTitle().equalsIgnoreCase(String.valueOf(differentGame.getGameTitle()))){
-                gamesDataList.set(i, differentGame);
-                saveDataToFile();
+        return null;
+    }
+
+    public ArrayList<Game> getGames() { return games; }
+    public ArrayList<Customer> getCustomers() { return customers; }
+    public ArrayList<Rental> getRentals() { return rentals; }
+    public ArrayList<Staff> getStaffList() { return staffList; }
+
+    // ==================== GAME CRUD & PERSISTENCE ====================
+    public void addGame(Game newGame) {
+        games.add(newGame);
+        saveGames();
+    }
+
+    public boolean removeGame(String title) {
+        boolean removed = games.removeIf(g -> g.getGameTitle().equalsIgnoreCase(title.trim()));
+        if (removed) saveGames();
+        return removed;
+    }
+
+    public boolean updateGameStatus(String title, boolean available, String notes) {
+        for (Game g : games) {
+            if (g.getGameTitle().equalsIgnoreCase(title.trim())) {
+                g.setAvailable(available);
+                if (notes != null && !notes.isBlank()) g.setGameNotes(notes);
+                saveGames();
                 return true;
             }
         }
         return false;
     }
-    public boolean isGameExists(String gameTitle) {return findGame(gameTitle) != null; }
 
-    public boolean deleteGame(Game game) throws FileNotFoundException {
-        boolean deleted = gamesDataList.remove(game);
-        if(deleted){
-            saveDataToFile();
-        }
-        return deleted;
-    }
-
-
-    /**
-     * saveDataToFile method
-     * @throws FileNotFoundException
-     */
-    private void saveDataToFile() throws FileNotFoundException{
-            PrintWriter writer = new PrintWriter("data/games.txt");
-            for(int i=0;i<gamesDataList.size();i++){
-                Game game = gamesDataList.get(i);
-                String line = convertGameToLine(game);
-                writer.println(line);
+    public void saveGames() {
+        try (PrintWriter writer = new PrintWriter(new FileWriter("data/games.txt"))) {
+            for (Game g : games) {
+                writer.println(g.getGameTitle() + "," + g.getMinPlayers() + "," +
+                        g.getMaxPlayers() + "," + g.getCategory() + "," +
+                        g.isAvailable() + "," + g.getGameNotes());
             }
-            writer.close();
-
-        }
-
-    /**
-     * convertLineToGame() method
-     * @param line
-     * @return
-     */
-
-
-    private Game convertLineToGame(String line) {
-        Scanner scan = new Scanner(line);
-          scan.useDelimiter(",");
-
-            String gameTitle = scan.next();
-             int minPlayers = Integer.parseInt(scan.next());
-             int maxPlayers = Integer.parseInt(scan.next());
-                String gameType = scan.next();
-                        Boolean available = Boolean.parseBoolean(scan.next());
-                    String gameNotes = scan.next();
-
-    scan.close();
-
-    Game game = new Game(gameTitle, minPlayers, maxPlayers, gameType, available, gameNotes);
-    return game;
-
-    }
-
-    /**
-     * convertGameToLine() method
-     * @param game
-     * @return
-     */
-
-
-    private String convertGameToLine(Game game) {
-        String line = "";
-
-        line += game.getGameTitle();
-        line += ",";
-
-        line += game.getMinPlayers();
-        line += ",";
-
-        line += game.getMaxPlayers();
-        line += ",";
-
-        line += game.getCategory();
-        line += ",";
-
-        line += game.isAvailable();
-        line += ",";
-
-        line += game.getGameNotes();
-        return line;
-
-    }
-
-
-
-
-    /////////////////////////////////////////////////////////////////////////////////////////////
-    ///////////////////////////////Rental methods\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-    /////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-public void addRental(Rental rental) {
-        if(rental != null) {
-            rentalDataList.add(rental);
-        }
-}
-
-
-    public void loadRentalsDataFromFile() throws FileNotFoundException {
-
-        File file = new File("data/rentals.txt");
-        Scanner scan = new Scanner(file);
-
-        while (scan.hasNextLine()) {
-            String line = scan.nextLine();
-            Rental rental = convertLineToRental(line);
-            addRental(rental);
-        }
-        scan.close();
-    }
-
-
-
-public ArrayList<Rental> getRentalList() {return  rentalDataList;}
-
-    public void setRentalDataList(ArrayList<Rental> rentalDataList) {
-        if(rentalDataList != null) {
-            this.rentalDataList = rentalDataList;
-        }
-    }
-        private void saveRentalDataToFile() throws FileNotFoundException {
-            PrintWriter writer = new PrintWriter("data/rentals.txt");
-            for(int i=0;i<rentalDataList.size();i++){
-                Rental rental = rentalDataList.get(i);
-                String line = convertRentalToLine(rental);
-                writer.println(line);
-            }
-            writer.close();
-        }
-
-    private Rental convertLineToRental(String line) {
-        Scanner scan = new Scanner(line);
-        scan.useDelimiter(",");
-
-        String gameTitle = scan.next().trim();
-        String customerName = scan.next().trim();
-        String checkoutDate = scan.next().trim();
-        String returnedDate = scan.next().trim();
-        boolean returned = Boolean.parseBoolean(scan.next().trim());
-
-        scan.close();
-
-
-        Game game = findGame(gameTitle);
-        Customer customer = findCustomerByName(customerName);
-
-        if (game == null || customer == null) {
-            System.out.println("Rental not found.");
-            return null;
-        }
-
-
-        Rental rental = new Rental(game,customer);
-        LocalDate checkout = LocalDate.parse(checkoutDate);
-        LocalDate returnDate;
-
-        if(returnedDate.isEmpty() || returnedDate.equalsIgnoreCase("Not returned")) {
-            returnDate =null;
-        }else {
-            returnDate = LocalDate.parse(returnedDate);
-        }
-        rental.setRentalDates(checkout, returnDate, returned);
-        return rental;
-
-    }
-        private String convertRentalToLine(Rental rental) {
-        String line = "";
-        line += rental.getGameTitle();
-        line += ",";
-
-        line += rental.getCustomer();
-        line += ",";
-
-        line += rental.getCheckoutDate();
-        line += ",";
-
-        if (rental.getReturnDate() == null) {
-                line += "Not returned";
-        } else {
-            line += rental.getReturnDate();
-        }
-
-        line += ",";
-        line += rental.isReturned();
-
-        return line;
-        }
-
-
-
-
-    public ArrayList<Rental> getRentalDataList() {return rentalDataList;}
-
-    public Rental findRental(String gameTitle) {
-        for(int i=0;i<rentalDataList.size();i++){
-            Rental rental = rentalDataList.get(i);
-            if(rental.getGameTitle().equalsIgnoreCase(gameTitle)) {
-
-                return rental;
-            }
-        }
-        return null;
-    }
-
-    public ArrayList<Customer> getCustomerDataList() {
-        return customersDataList;
-    }
-
-    public void setCustomerDataList(ArrayList<Customer> customerDataList) {
-        if(customerDataList != null){
-            this.customersDataList = customerDataList;
+        } catch (IOException e) {
+            System.out.println("Error saving games: " + e.getMessage());
         }
     }
 
-
-    public void loadRentalDataFromFile() throws FileNotFoundException {
-        File file = new File("data/rentals.txt");
-        Scanner scan = new Scanner(file);
-
-        while (scan.hasNextLine()){
-            String line = scan.nextLine();
-            Rental rental = convertLineToRental(line);
-            addRental(rental);
-        }
-        scan.close();
+    // ==================== CUSTOMER CRUD & PERSISTENCE ====================
+    public void addCustomer(Customer newCustomer) {
+        customers.add(newCustomer);
+        saveCustomers();
     }
 
-
-/////////////////////////////////////////////////////////////////////////////////////////////
-    ///////////////////////////////Customer methods\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-/////////////////////////////////////////////////////////////////////////////////////////////////
-    /**
-     * An addCustomer() method, which adds an AidShip object to the group of aid ships.
-     * @param customer
-     */
-
-
-public void addCustomer(Customer customer){
-    if(customer != null) {
-        customersDataList.add(customer);
-    }
-}
-
-    /**
-     *  loadAidShips() method, which reads the data from text files and adds a new AidShip object for each aid ship
-     *      *      * found in the file. This method must throw exceptions related to file I/O.
-     * @throws FileNotFoundException
-     */
-    public void loadCustomers() throws FileNotFoundException {
-        File file = new File("data/customers.txt");
-        Scanner scan = new Scanner(file);
-
-        while(scan.hasNextLine()){
-            String line = scan.nextLine();
-            Customer customer = convertLineToCustomer(line);
-            addCustomer(customer);
-        }
-        scan.close();
+    public boolean removeCustomer(String fullName) {
+        boolean removed = customers.removeIf(c -> c.getFullName().equalsIgnoreCase(fullName.trim()));
+        if (removed) saveCustomers();
+        return removed;
     }
 
-
-    public void loadCustomersDataFromFile() throws FileNotFoundException {
-
-        File file = new File("data/customers.txt");
-        Scanner scan = new Scanner(file);
-
-
-
-        while (scan.hasNextLine()) {
-            String line = scan.nextLine();
-            Customer customer = convertLineToCustomer(line);
-            addCustomer(customer);
-        }
-
-        scan.close();
-    }
-
-    public ArrayList<Customer> getCustomersList() {return customersDataList; }
-
-    /**
-     * A findAidShip() method, which takes a string representing the registration number of an aid ship,
-     *      *  searches for the aid ship in the group of aid ships, and returns that aid ship if found.
-     *      *  If the aid ship is not found, the method returns null.
-     * @param fullName
-     * @return
-     */
-
-    public Customer findCustomerByName(String fullName) {
-
-        for (Customer customer : customersDataList) {
-
-            if (customer.getFullName().trim().equalsIgnoreCase(fullName.trim())) {
-                return customer;
-            }
-        }
-
-        return null;
-    }
-
-
-    /**
-     * An BOOLEAN!! isAidShipExists() method, which takes a string representing the registration number
-     *      *  of an aid ship and returns whether the ship is found in the group of ships.
-     * @param phoneNumber
-     * @return
-     */
-
-
-   // public boolean isCustomerExists(String phoneNumber) {return findCustomer(phoneNumber) != null;}
-
-    /**
-     * An updateAidShip() method, which takes an AidShip object, and replaces the existing aid ship with the this object.
-     *      * This method must throw exceptions related to file I/O
-     * @param phoneNumber
-     * @return
-     * @throws IOException
-     */
-
-
-        public boolean updateCustomer(Customer phoneNumber) throws IOException {
-        if(phoneNumber == null) {
-            return false;
-        }
-        for(int i=0;i<customersDataList.size();i++){
-            Customer customer = customersDataList.get(i);
-            if(customer.getPhoneNumber().equalsIgnoreCase(String.valueOf(phoneNumber))){
-                customersDataList.set(i,phoneNumber);
-                saveDataToFile();
+    public boolean updateCustomer(String fullName, String email, String phone, String prefContact, String notes) {
+        for (Customer c : customers) {
+            if (c.getFullName().equalsIgnoreCase(fullName.trim())) {
+                if (!email.isBlank()) c.setEmail(email);
+                if (!phone.isBlank()) c.setPhoneNumber(phone);
+                if (!prefContact.isBlank()) c.setPreferredContact(prefContact);
+                if (!notes.isBlank()) c.setCustomerNotes(notes);
+                saveCustomers();
                 return true;
             }
         }
         return false;
-        }
+    }
 
-
-        public boolean deleteCustomer(Customer customer) throws FileNotFoundException {
-            boolean deleted = customersDataList.remove(customer);
-            if(deleted){
-                saveDataToFile();
+    public void saveCustomers() {
+        try (PrintWriter writer = new PrintWriter(new FileWriter("data/customers.txt"))) {
+            for (Customer c : customers) {
+                writer.println(c.getFullName() + "," + c.getEmail() + "," +
+                        c.getPhoneNumber() + "," + c.getPreferredContact() + "," +
+                        c.getCustomerNotes());
             }
-            return deleted;
+        } catch (IOException e) {
+            System.out.println("Error saving customers: " + e.getMessage());
+        }
+    }
+
+    // ==================== RENTAL TRANSACTIONS & PERSISTENCE ====================
+    public boolean checkoutGame(String gameTitle, String customerName) {
+        Game targetGame = findGameByTitle(gameTitle);
+        Customer targetCustomer = findCustomerByName(customerName);
+
+        if (targetGame == null || targetCustomer == null || !targetGame.isAvailable()) {
+            return false;
         }
 
+        targetGame.setAvailable(false);
+        Rental rental = new Rental(targetGame, targetCustomer);
+        rentals.add(rental);
+        saveGames();
+        saveRentals();
+        return true;
+    }
 
-    /**
-     * A saveDataToFile() method, which saves the data to the data file after an update or delete.
-     *      * This method must throw exceptions related to file I/O
-     * @throws IOException
-     */
-
-    public void saveDatatoFile() throws IOException {
-            PrintWriter out = new PrintWriter("data/customers.txt");
-            for(int i=0;i<customersDataList.size();i++){
-                Customer customer = customersDataList.get(i);
-
-                String line = convertCustomerToLine(customer);
-                out.println(line);
+    public boolean returnGame(String gameTitle, String customerName) {
+        for (Rental r : rentals) {
+            if (!r.isReturned() &&
+                    r.getGame().getGameTitle().equalsIgnoreCase(gameTitle.trim()) &&
+                    r.getCustomer().getFullName().equalsIgnoreCase(customerName.trim())) {
+                r.returnGame();
+                saveGames();
+                saveRentals();
+                return true;
             }
-            out.close();
         }
+        return false;
+    }
 
-    /**
-     *  A convertLinetoCustomer() method, which takes a line read from a file and
-     *      * returns a  Customer object representing the data in the line.
-     * @param line
-     * @return
-     */
-
-
-        private Customer convertLineToCustomer(String line){
-        Scanner scan = new Scanner(line);
-        scan.useDelimiter(",");
-
-        String fullName = scan.next();
-        String email = scan.next();
-        String  phoneNumber = scan.next();
-        String preferredContact = scan.next();
-        String customerNotes = scan.next();
-
-        scan.close();
-
-        Customer customer = new Customer(fullName,email,phoneNumber,preferredContact,customerNotes);
-        return customer;
+    public void saveRentals() {
+        try (PrintWriter writer = new PrintWriter(new FileWriter("data/rentals.txt"))) {
+            for (Rental r : rentals) {
+                writer.println(r.toCsvString());
+            }
+        } catch (IOException e) {
+            System.out.println("Error saving rentals: " + e.getMessage());
         }
-
-
-    /**
-     * A convertCustomerToLine() method, which takes a customer object and returns a string representing the object as a line in the file
-     * @param customer
-     * @return
-     */
-
-    private String convertCustomerToLine(Customer customer){
-            String line = "";
-
-            line+=customer.getFullName()+",";
-            line += ",";
-            line+=customer.getEmail()+",";
-            line += ",";
-            line+=customer.getPhoneNumber()+",";
-            line += ",";
-            line+=customer.getPreferredContact()+",";
-            line += ",";
-            line+=customer.getNotes()+",";
-            return line;
-
-        }
-
-
-    /**
-     * A toString() method, returns a string representation of all aid ships.
-     * @return
-     */
-
-
-
-
-    /**
-     *
-     * @return
-     */
-
-
+    }
 }
-

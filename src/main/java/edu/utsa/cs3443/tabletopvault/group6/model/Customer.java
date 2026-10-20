@@ -1,54 +1,38 @@
 package edu.utsa.cs3443.tabletopvault.group6.model;
 
+/**
+ * Customer class representing library patrons who borrow board games.
+ * Extends the abstract Person base class and tracks preferred contact methods and staff notes.
+ */
 public class Customer extends Person {
 
-    //customer specific fields
     private String preferredContact;
-    private String notes;
+    private String customerNotes;
 
-
-    //constructor
-    public Customer(String fullName, String email, String phoneNumber,
-                    String preferredContact, String notes) {
-        //From Person class
+    public Customer(String fullName, String email, String phoneNumber, String preferredContact, String customerNotes) {
         super(fullName, email, phoneNumber);
         this.preferredContact = preferredContact;
-        this.notes = notes;
-
-    }
-//getters
-    public String getPreferredContact() { return preferredContact; }
-    public String getNotes() {return notes;}
-//setters
-    public void setPreferredContact(String preferredContact) { this.preferredContact = preferredContact; }
-    public void setNotes(String notes) {
-        this.notes = notes;
+        this.customerNotes = customerNotes;
     }
 
+    public String getPreferredContact() {
+        return preferredContact;
+    }
 
-@Override
-public String toString() {
-    return getFullName() + " | "
-            + getEmail() + " | "
-            + getPhoneNumber() + " | "
-            + getPreferredContact() + " | "
-            + getNotes();
+    public void setPreferredContact(String preferredContact) {
+        this.preferredContact = preferredContact;
+    }
 
+    public String getCustomerNotes() {
+        return customerNotes;
+    }
+
+    public void setCustomerNotes(String customerNotes) {
+        this.customerNotes = customerNotes;
+    }
+
+    @Override
+    public String toString() {
+        return getFullName() + " | " + getEmail() + " | " + getPhoneNumber() + " | " + preferredContact + " | " + customerNotes;
+    }
 }
-}
-
-
-
-
-    //@Override
-
-
-
-
-
-
-
-
-
-
-
