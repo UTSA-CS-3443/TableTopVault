@@ -1,0 +1,3 @@
+Monopoly,Ralph Wiggum,2026-10-15,Not returned, False
+Scattergories,Jessie Pinkman, 2026-10-15,Not returned,false
+Catan,Bob Ross,2026-10-12,2026-10-17,true

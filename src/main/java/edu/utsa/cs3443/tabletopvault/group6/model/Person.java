@@ -9,24 +9,21 @@ public abstract class Person {
     private String fullName;
     private String email;
     private String phoneNumber;
-    private String preferredContact;
-    private String preferredContactEmail;
+
+
 
 
     //Constructor
-    protected Person (String fullName, String email, String phoneNumber, String preferredContact, String preferredContactEmail ) {
+    protected Person (String fullName, String email, String phoneNumber) {
         this.fullName = fullName;
         this.email = email;
         this.phoneNumber = phoneNumber;
-        this.preferredContact = preferredContact;
-        this.preferredContactEmail = preferredContactEmail;
     }
     //Getters
     public String getFullName() {return fullName;}
     public String getEmail() {return email;}
     public String getPhoneNumber() {return phoneNumber;}
-    public String getPreferredContact() {return preferredContact;}
-    public String getPreferredContactEmail() {return preferredContactEmail;}
+
 
     //Setters
     public void setFullName(String fullName) {
@@ -38,11 +35,7 @@ public abstract class Person {
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
-    public void setPreferredContact(String preferredContact) {
-            this.preferredContact = preferredContact;
+
     }
-    public void setPreferredContactEmail(String preferredContactEmail) {
-        this.preferredContactEmail = preferredContactEmail;
-    }
-}
+
 

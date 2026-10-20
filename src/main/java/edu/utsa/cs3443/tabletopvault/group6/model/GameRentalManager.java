@@ -1,12 +1,13 @@
 package edu.utsa.cs3443.tabletopvault.group6.model;
+import java.time.LocalDate;
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.io.*;
 
 public class GameRentalManager {
 
-    private ArrayList<Customer> customersDataList; //array hold customers
-    private ArrayList<Game> gamesDataList;  //array hold games
+    private ArrayList<Customer> customersDataList; //array hold customers.txt
+    private ArrayList<Game> gamesDataList;  //array hold games.txt
     private ArrayList<Rental> rentalDataList;
 
     public GameRentalManager() {
@@ -15,16 +16,16 @@ public class GameRentalManager {
         rentalDataList = new ArrayList<>();
     }
 
+
+
+
     /**
      * methods for showGameList()
      * @return
      */
     public String showGameList() {
         String result = "";
-
         result += "Game Title | Min Players | Max Players | Category | Available | Game Notes\n ";
-
-
 
         for (int i = 0; i < gamesDataList.size(); i++) {
             result += gamesDataList.get(i).toString();
@@ -33,6 +34,12 @@ public class GameRentalManager {
 
         return result;
     }
+
+
+
+
+
+
 
 
     public String showCustomerList() {
@@ -44,14 +51,24 @@ public class GameRentalManager {
             result += "\n";
         }
         return result;
+
+
+
+
+
+
+
+
     }
-
-
-
-    /**
-     * method for showCustomerList()
-     * @return
-     */
+    public String showRentalList() {
+        String result = "";
+        result += "Game Title | Customer Name | Checkout Date | Return Date | Returned\n";
+        for (int i = 0; i < rentalDataList.size(); i++) {
+            result += rentalDataList.get(i).toString();
+            result += "\n";
+        }
+        return result;
+    }
 
 
 
@@ -78,7 +95,7 @@ public class GameRentalManager {
      */
     public void loadGamesDataFromFile() throws FileNotFoundException {
 
-        File file = new File("data/games");
+        File file = new File("data/games.txt");
         Scanner scan = new Scanner(file);
 
 
@@ -147,7 +164,7 @@ public class GameRentalManager {
      * @throws FileNotFoundException
      */
     private void saveDataToFile() throws FileNotFoundException{
-            PrintWriter writer = new PrintWriter("data/games");
+            PrintWriter writer = new PrintWriter("data/games.txt");
             for(int i=0;i<gamesDataList.size();i++){
                 Game game = gamesDataList.get(i);
                 String line = convertGameToLine(game);
@@ -215,8 +232,146 @@ public class GameRentalManager {
 
 
 
+    /////////////////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////Rental methods\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+    /////////////////////////////////////////////////////////////////////////////////////////////////
 
 
+public void addRental(Rental rental) {
+        if(rental != null) {
+            rentalDataList.add(rental);
+        }
+}
+
+
+    public void loadRentalsDataFromFile() throws FileNotFoundException {
+
+        File file = new File("data/rentals.txt");
+        Scanner scan = new Scanner(file);
+
+        while (scan.hasNextLine()) {
+            String line = scan.nextLine();
+            Rental rental = convertLineToRental(line);
+            addRental(rental);
+        }
+        scan.close();
+    }
+
+
+
+public ArrayList<Rental> getRentalList() {return  rentalDataList;}
+
+    public void setRentalDataList(ArrayList<Rental> rentalDataList) {
+        if(rentalDataList != null) {
+            this.rentalDataList = rentalDataList;
+        }
+    }
+        private void saveRentalDataToFile() throws FileNotFoundException {
+            PrintWriter writer = new PrintWriter("data/rentals.txt");
+            for(int i=0;i<rentalDataList.size();i++){
+                Rental rental = rentalDataList.get(i);
+                String line = convertRentalToLine(rental);
+                writer.println(line);
+            }
+            writer.close();
+        }
+
+    private Rental convertLineToRental(String line) {
+        Scanner scan = new Scanner(line);
+        scan.useDelimiter(",");
+
+        String gameTitle = scan.next().trim();
+        String customerName = scan.next().trim();
+        String checkoutDate = scan.next().trim();
+        String returnedDate = scan.next().trim();
+        boolean returned = Boolean.parseBoolean(scan.next().trim());
+
+        scan.close();
+
+
+        Game game = findGame(gameTitle);
+        Customer customer = findCustomerByName(customerName);
+
+        if (game == null || customer == null) {
+            System.out.println("Rental not found.");
+            return null;
+        }
+
+
+        Rental rental = new Rental(game,customer);
+        LocalDate checkout = LocalDate.parse(checkoutDate);
+        LocalDate returnDate;
+
+        if(returnedDate.isEmpty() || returnedDate.equalsIgnoreCase("Not returned")) {
+            returnDate =null;
+        }else {
+            returnDate = LocalDate.parse(returnedDate);
+        }
+        rental.setRentalDates(checkout, returnDate, returned);
+        return rental;
+
+    }
+        private String convertRentalToLine(Rental rental) {
+        String line = "";
+        line += rental.getGameTitle();
+        line += ",";
+
+        line += rental.getCustomer();
+        line += ",";
+
+        line += rental.getCheckoutDate();
+        line += ",";
+
+        if (rental.getReturnDate() == null) {
+                line += "Not returned";
+        } else {
+            line += rental.getReturnDate();
+        }
+
+        line += ",";
+        line += rental.isReturned();
+
+        return line;
+        }
+
+
+
+
+    public ArrayList<Rental> getRentalDataList() {return rentalDataList;}
+
+    public Rental findRental(String gameTitle) {
+        for(int i=0;i<rentalDataList.size();i++){
+            Rental rental = rentalDataList.get(i);
+            if(rental.getGameTitle().equalsIgnoreCase(gameTitle)) {
+
+                return rental;
+            }
+        }
+        return null;
+    }
+
+    public ArrayList<Customer> getCustomerDataList() {
+        return customersDataList;
+    }
+
+    public void setCustomerDataList(ArrayList<Customer> customerDataList) {
+        if(customerDataList != null){
+            this.customersDataList = customerDataList;
+        }
+    }
+
+
+    public void loadRentalDataFromFile() throws FileNotFoundException {
+        File file = new File("data/rentals.txt");
+        Scanner scan = new Scanner(file);
+
+        while (scan.hasNextLine()){
+            String line = scan.nextLine();
+            Rental rental = convertLineToRental(line);
+            addRental(rental);
+        }
+        scan.close();
+    }
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////
@@ -240,7 +395,7 @@ public void addCustomer(Customer customer){
      * @throws FileNotFoundException
      */
     public void loadCustomers() throws FileNotFoundException {
-        File file = new File("data/customers");
+        File file = new File("data/customers.txt");
         Scanner scan = new Scanner(file);
 
         while(scan.hasNextLine()){
@@ -254,7 +409,7 @@ public void addCustomer(Customer customer){
 
     public void loadCustomersDataFromFile() throws FileNotFoundException {
 
-        File file = new File("data/customers");
+        File file = new File("data/customers.txt");
         Scanner scan = new Scanner(file);
 
 
@@ -274,18 +429,22 @@ public void addCustomer(Customer customer){
      * A findAidShip() method, which takes a string representing the registration number of an aid ship,
      *      *  searches for the aid ship in the group of aid ships, and returns that aid ship if found.
      *      *  If the aid ship is not found, the method returns null.
-     * @param phoneNumber
+     * @param fullName
      * @return
      */
-    public Customer findCustomer(String phoneNumber){
-        for(int i=0;i<customersDataList.size();i++){
-            Customer customer = customersDataList.get(i);
-            if(customer.getPhoneNumber().equalsIgnoreCase(String.valueOf(phoneNumber))){
+
+    public Customer findCustomerByName(String fullName) {
+
+        for (Customer customer : customersDataList) {
+
+            if (customer.getFullName().trim().equalsIgnoreCase(fullName.trim())) {
                 return customer;
             }
         }
+
         return null;
     }
+
 
     /**
      * An BOOLEAN!! isAidShipExists() method, which takes a string representing the registration number
@@ -295,7 +454,7 @@ public void addCustomer(Customer customer){
      */
 
 
-    public boolean isCustomerExists(String phoneNumber) {return findCustomer(phoneNumber) != null;}
+   // public boolean isCustomerExists(String phoneNumber) {return findCustomer(phoneNumber) != null;}
 
     /**
      * An updateAidShip() method, which takes an AidShip object, and replaces the existing aid ship with the this object.
@@ -338,7 +497,7 @@ public void addCustomer(Customer customer){
      */
 
     public void saveDatatoFile() throws IOException {
-            PrintWriter out = new PrintWriter("data/customers");
+            PrintWriter out = new PrintWriter("data/customers.txt");
             for(int i=0;i<customersDataList.size();i++){
                 Customer customer = customersDataList.get(i);
 
@@ -390,7 +549,7 @@ public void addCustomer(Customer customer){
             line += ",";
             line+=customer.getPreferredContact()+",";
             line += ",";
-            line+=customer.getCustomerNotes()+",";
+            line+=customer.getNotes()+",";
             return line;
 
         }
@@ -408,18 +567,6 @@ public void addCustomer(Customer customer){
      *
      * @return
      */
-
-    public ArrayList<Customer> getCustomerDataList() {
-        return customersDataList;
-        }
-
-    public void setCustomerDataList(ArrayList<Customer> customerDataList) {
-        if(customerDataList != null){
-            this.customersDataList = customerDataList;
-        }
-    }
-
-
 
 
 }
