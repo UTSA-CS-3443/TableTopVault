@@ -33,6 +33,8 @@ public class Rental {
         this.returned = returned;
     }
 
+
+
     public void returnGame() {
         this.returnDate = LocalDate.now();
         this.returned = true;
@@ -53,13 +55,14 @@ public class Rental {
                 checkoutDate + "," + returnStr + "," + returned;
     }
 
+    /**
+     *
+     * @return
+     */
+
     @Override
     public String toString() {
         String returnStr = (returnDate == null) ? "Not returned" : returnDate.toString();
-        return "Game: " + game.getGameTitle() +
-                "\nCustomer: " + customer.getFullName() +
-                "\nCheckout Date: " + checkoutDate +
-                "\nReturn Date: " + returnStr +
-                "\nReturned: " + returned;
+        return String.format("%-18s | %-22s | %-13s | %-13s | %s", game.getGameTitle(), customer.getFullName(), checkoutDate, returnStr, returned);
     }
 }

@@ -1,3 +1,5 @@
-  Jessie Pinkman,pinkman2000@gmail.com,505-369-5100,Email,Leaves game instructions sticky
-  Bob Ross,mountainpeakpaint@gmail.com,214-985-6632,Text,No comment
-  Ralph Wiggum,choochoo2@gmail.com,972-662-0141,Text,Returns game unorganized
+Jessie Pinkman,pinkman2000@gmail.com,505-369-5100,Email,Leaves game instructions sticky
+Bob Ross,mountainpeakpaint@gmail.com,214-985-6632,Text,No comment
+Ralph Wiggum,choochoo2@gmail.com,972-662-0141,Text,Returns game unorganized
+Albert Miyagi,kobrakai19@aol.com,210-998-7845,email,dude really likes word games
+Spongebob Squarepants,Sponge_Burger@hotmail.com,998-654-3214,Text,Wants to plan a game meetup next month

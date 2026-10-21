@@ -20,7 +20,8 @@ public class Main {
         boolean running = true;
 
         while (running) {
-            System.out.println("\n******************************* [TABLETOP VAULT] *******************************");
+
+            System.out.println("\n********************************************* [TABLETOP VAULT] **************************************************");
             System.out.println("1. The Shelf (game collection)");
             System.out.println("2. Checkout Counter");
             System.out.println("3. Add/Update Customer");
@@ -53,7 +54,8 @@ public class Main {
     private static void runShelfMenu(GameRentalManager manager, Scanner scanner) {
         boolean shelfRunning = true;
         while (shelfRunning) {
-            System.out.println("\n******************************* [THE SHELF] *******************************");
+
+            System.out.println("\n************************************************ [THE SHELF] ****************************************************");
             System.out.println("1. View Games");
             System.out.println("2. Add new game to inventory");
             System.out.println("3. Remove game from inventory");
@@ -65,11 +67,13 @@ public class Main {
 
             switch (choice) {
                 case "1":
-                    System.out.println("\nGame Title | Min Players | Max Players | Category | Available | Game Notes");
+                    System.out.printf("\n%-18s | %-11s | %-11s | %-12s | %-9s | %s%n", "Game Title" , "Min Players" , "Max Players" , "Category" , "Available" , "Game Notes");
+
+
+                    System.out.println("*****************************************************************************************************************");
                     for (Game g : manager.getGames()) {
-                        System.out.println(g.getGameTitle() + " | " + g.getMinPlayers() + " | " +
-                                g.getMaxPlayers() + " | " + g.getCategory() + " | " +
-                                g.isAvailable() + " | " + g.getGameNotes());
+                        System.out.println(g);
+
                     }
                     break;
                 case "2":
@@ -121,7 +125,8 @@ public class Main {
     private static void runCheckoutMenu(GameRentalManager manager, Scanner scanner) {
         boolean checkoutRunning = true;
         while (checkoutRunning) {
-            System.out.println("\n******************************* [Checkout Desk] *******************************");
+
+            System.out.println("\n********************************************** [Checkout Desk] **************************************************");
             System.out.println("1. View rentals");
             System.out.println("2. Checkout new game");
             System.out.println("3. Return game");
@@ -132,9 +137,11 @@ public class Main {
 
             switch (choice) {
                 case "1":
-                    System.out.println("\nGame Title | Customer Name | Checkout Date | Return Date | Returned");
+                    System.out.printf("\n%-18s | %-22s | %-13s | %-13s | %s%n", "Game Title" , "Game Title" , "Customer Name" , "Checkout Date" , "Return Date" , "Returned");
+                    System.out.println("*****************************************************************************************************************");
+
                     for (Rental r : manager.getRentals()) {
-                        System.out.println(r.toCsvString().replace(",", " | "));
+                        System.out.println(r);
                     }
                     break;
                 case "2":
@@ -171,7 +178,7 @@ public class Main {
     private static void runCustomerMenu(GameRentalManager manager, Scanner scanner) {
         boolean custRunning = true;
         while (custRunning) {
-            System.out.println("\n******************************* [Add / Update Customer] *******************************");
+            System.out.println("\n************************************* [Add / Update Customer] ****************************************");
             System.out.println("1. View current customer listings");
             System.out.println("2. Add new customer");
             System.out.println("3. Update Customer");
@@ -182,12 +189,12 @@ public class Main {
             String choice = scanner.nextLine();
 
             switch (choice) {
+
                 case "1":
-                    System.out.println("\nFull Name | Email | Phone Number | Preferred Contact | Customer Notes");
+                    System.out.printf("\n%-22s | %-30s | %-14s | %-17s | %s%n", "Full Name", "Email", "Phone Number", "Preferred Contact", "Customer Notes");
+                    System.out.println("*****************************************************************************************************************");
                     for (Customer c : manager.getCustomers()) {
-                        System.out.println(c.getFullName() + " | " + c.getEmail() + " | " +
-                                c.getPhoneNumber() + " | " + c.getPreferredContact() + " | " +
-                                c.getCustomerNotes());
+                        System.out.println(c);
                     }
                     break;
                 case "2":

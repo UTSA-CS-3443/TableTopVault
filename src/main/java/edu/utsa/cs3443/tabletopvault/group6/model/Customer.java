@@ -31,8 +31,14 @@ public class Customer extends Person {
         this.customerNotes = customerNotes;
     }
 
+
+
+
+
     @Override
     public String toString() {
-        return getFullName() + " | " + getEmail() + " | " + getPhoneNumber() + " | " + preferredContact + " | " + customerNotes;
+        return String.format("%-22s | %-30s | %-14s | %-17s | %s", getFullName(), getEmail(), getPhoneNumber(), preferredContact, customerNotes);
     }
 }
+
+
