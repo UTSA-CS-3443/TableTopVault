@@ -4,21 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1caaed2-6cc3-4484-8521-4ad542217d47" name="Changes" comment="&quot;Finalize prototype milestone CRUD and file I/O persistence&quot;">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/utsa/cs3443/tabletopvault/group6/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/utsa/cs3443/tabletopvault/group6/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/utsa/cs3443/tabletopvault/group6/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/utsa/cs3443/tabletopvault/group6/controller/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/utsa/cs3443/tabletopvault/group6/controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/utsa/cs3443/tabletopvault/group6/controller/GameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/utsa/cs3443/tabletopvault/group6/controller/mainScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/utsa/cs3443/tabletopvault/group6/controller/mainScreenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/utsa/cs3443/tabletopvault/group6/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/utsa/cs3443/tabletopvault/group6/model/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/utsa/cs3443/tabletopvault/group6/model/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/utsa/cs3443/tabletopvault/group6/model/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/utsa/cs3443/tabletopvault/group6/model/GameRentalManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/utsa/cs3443/tabletopvault/group6/model/GameRentalManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/utsa/cs3443/tabletopvault/group6/model/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/utsa/cs3443/tabletopvault/group6/model/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/utsa/cs3443/tabletopvault/group6/model/Rental.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/utsa/cs3443/tabletopvault/group6/model/Rental.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/utsa/cs3443/tabletopvault/group6/model/Staff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/utsa/cs3443/tabletopvault/group6/model/Staff.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
-    </list>
+    <list default="true" id="c1caaed2-6cc3-4484-8521-4ad542217d47" name="Changes" comment="Comments added and updated" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,6 +31,65 @@
         <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
       </MavenGeneralSettings>
     </option>
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0007051517984813" />
+      <entry key="MS500" value="1.2874591646079012" />
+      <entry key="S2" value="2.9677232589179408" />
+      <entry key="S5" value="4.893095362545666" />
+      <entry key="S10" value="6.139739235693995" />
+      <entry key="S30" value="7.292074738502554" />
+      <entry key="S60" value="7.633507598209707" />
+      <entry key="M2" value="7.813490304769743" />
+      <entry key="M5" value="7.924595418742796" />
+      <entry key="M10" value="7.962162773674131" />
+      <entry key="M15" value="7.9747450856448765" />
+      <entry key="M30" value="7.987357466541743" />
+      <entry key="H1" value="7.9936749589636245" />
+      <entry key="H2" value="7.9968365352495" />
+      <entry key="H4" value="7.9984180314846824" />
+      <entry key="D1" value="7.999736305776586" />
+      <entry key="W1" value="7.999962328593195" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="0.0" />
+      <entry key="S10" value="0.0" />
+      <entry key="S30" value="0.0" />
+      <entry key="S60" value="0.0" />
+      <entry key="M2" value="0.0" />
+      <entry key="M5" value="0.0" />
+      <entry key="M10" value="0.0" />
+      <entry key="M15" value="0.0" />
+      <entry key="M30" value="0.0" />
+      <entry key="H1" value="0.0" />
+      <entry key="H2" value="0.0" />
+      <entry key="H4" value="0.0" />
+      <entry key="D1" value="0.0" />
+      <entry key="W1" value="0.0" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="0.9599499894426403" />
+      <entry key="MS500" value="1.2776365197447728" />
+      <entry key="S2" value="2.9623478899725053" />
+      <entry key="S5" value="4.888699309429625" />
+      <entry key="S10" value="6.13662975701152" />
+      <entry key="S30" value="7.290728167881734" />
+      <entry key="S60" value="7.632786199089201" />
+      <entry key="M2" value="7.813116746259409" />
+      <entry key="M5" value="7.924442796688323" />
+      <entry key="M10" value="7.962085919892842" />
+      <entry key="M15" value="7.974693728454309" />
+      <entry key="M30" value="7.9873317270962225" />
+      <entry key="H1" value="7.993662073994081" />
+      <entry key="H2" value="7.996830088948745" />
+      <entry key="H4" value="7.998414807379772" />
+      <entry key="D1" value="7.9997357682931485" />
+      <entry key="W1" value="7.9999622518066005" />
+    </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5,
@@ -100,6 +145,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="&quot;Finalize prototype milestone CRUD and file I/O persistence&quot;" />
     <MESSAGE value="Finalize prototype milestone CRUD and file I/O persistence" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finalize prototype milestone CRUD and file I/O persistence" />
+    <MESSAGE value="Comments added and updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="Comments added and updated" />
   </component>
 </project>
