@@ -1,3 +1,4 @@
 Catan,3,4,Strategy,true,No comment
 Scattergories,2,6,Party,true,Instruction book is sticky
 Scabble,2,4,Party,true,'No comment'
+Battleship,2,2,Strategy,true,No comment
