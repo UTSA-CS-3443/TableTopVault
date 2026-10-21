@@ -1,22 +1,23 @@
 package edu.utsa.cs3443.tabletopvault.group6.model;
 
-import java.nio.charset.StandardCharsets;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
-
 /**
- * Staff class representing administrative users in the TableTop Vault system.
- * Extends the abstract Person base class and implements secure SHA-256 password hashing.
- *
- * Java Notes:
- * - Utilizes java.security.MessageDigest for cryptographic hashing without external library dependencies.
- * - Encapsulates username and passwordHash fields behind private access modifiers.
+ * Model class representing a TableTop Vault staff member.
+ * Extends Person and includes staff login/schedule metadata and credential verification.
  */
 public class Staff extends Person {
 
     private String username;
     private String passwordHash;
 
+    /**
+     * Constructs a Staff member instance.
+     *
+     * @param fullName     the staff member's full name
+     * @param email        the staff member's email address
+     * @param phoneNumber  the staff member's phone number
+     * @param username     the staff member's username or shift note
+     * @param passwordHash the staff member's password credential
+     */
     public Staff(String fullName, String email, String phoneNumber, String username, String passwordHash) {
         super(fullName, email, phoneNumber);
         this.username = username;
@@ -24,32 +25,58 @@ public class Staff extends Person {
     }
 
     /**
-     * Hashes a plaintext password string using the SHA-256 algorithm.
-     * @param plainPassword The raw password entered by the user.
-     * @return The resulting 64-character hexadecimal hash string.
+     * Gets the staff member's username or shift note.
+     *
+     * @return username string
      */
-    public static String hashPassword(String plainPassword) {
-        try {
-            MessageDigest digest = MessageDigest.getInstance("SHA-256");
-            byte[] encodedHash = digest.digest(plainPassword.getBytes(StandardCharsets.UTF_8));
-            StringBuilder hexString = new StringBuilder(2 * encodedHash.length);
-            for (byte b : encodedHash) {
-                String hex = Integer.toHexString(0xff & b);
-                if (hex.length() == 1) {
-                    hexString.append('0');
-                }
-                hexString.append(hex);
-            }
-            return hexString.toString();
-        } catch (NoSuchAlgorithmException e) {
-            throw new RuntimeException("Error hashing staff password", e);
-        }
+    public String getUsername() {
+        return username;
     }
 
-    public boolean authenticate(String inputPassword) {
-        return this.passwordHash.equals(hashPassword(inputPassword));
+    /**
+     * Updates the staff member's username or shift note.
+     *
+     * @param username new username string
+     */
+    public void setUsername(String username) {
+        this.username = username;
     }
 
-    public String getUsername() { return username; }
-    public String getPasswordHash() { return passwordHash; }
+    /**
+     * Gets the stored password hash/credential.
+     *
+     * @return password credential string
+     */
+    public String getPasswordHash() {
+        return passwordHash;
+    }
+
+    /**
+     * Updates the stored password hash/credential.
+     *
+     * @param passwordHash new password credential string
+     */
+    public void setPasswordHash(String passwordHash) {
+        this.passwordHash = passwordHash;
+    }
+
+    /**
+     * Verifies whether a provided password matches the staff member's stored credential.
+     *
+     * @param inputPassword password to verify
+     * @return true if the password matches, false otherwise
+     */
+    public boolean verifyPassword(String inputPassword) {
+        return passwordHash != null && passwordHash.equals(inputPassword);
+    }
+
+    /**
+     * Formats the staff record for console display (omitting sensitive password data).
+     *
+     * @return formatted staff string
+     */
+    @Override
+    public String toString() {
+        return getFullName() + " | " + getEmail() + " | " + getPhoneNumber() + " | Info: " + username;
+    }
 }

@@ -45,6 +45,11 @@ public class Game {
 
     @Override
     public String toString() {
-        return String.format("%-18s | %-11d | %-11d | %-12s | %-9s | %s", getGameTitle(), getMinPlayers(), getMaxPlayers(), getCategory(), isAvailable(), getGameNotes());
+        return getGameTitle() + " | " +
+                getMinPlayers() + " | " +
+                getMaxPlayers() + " | " +
+                getCategory() + " | " +
+                isAvailable() + " | " +
+                getGameNotes();
     }
 }
