@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1caaed2-6cc3-4484-8521-4ad542217d47" name="Changes" comment="&quot;Finalize prototype milestone CRUD and file I/O persistence&quot;">
+    <list default="true" id="c1caaed2-6cc3-4484-8521-4ad542217d47" name="Changes" comment="Update menu alignment">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/customers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/customers.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/utsa/cs3443/tabletopvault/group6/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/utsa/cs3443/tabletopvault/group6/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/utsa/cs3443/tabletopvault/group6/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/utsa/cs3443/tabletopvault/group6/model/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/utsa/cs3443/tabletopvault/group6/model/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/utsa/cs3443/tabletopvault/group6/model/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/utsa/cs3443/tabletopvault/group6/model/Rental.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/utsa/cs3443/tabletopvault/group6/model/Rental.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,20 +39,20 @@
       <entry key="MS100" value="1.0" />
       <entry key="MS500" value="1.0" />
       <entry key="S2" value="1.0" />
-      <entry key="S5" value="1.0" />
-      <entry key="S10" value="1.0" />
-      <entry key="S30" value="1.0" />
-      <entry key="S60" value="1.0" />
-      <entry key="M2" value="1.0" />
-      <entry key="M5" value="1.0" />
-      <entry key="M10" value="1.0" />
-      <entry key="M15" value="1.0" />
-      <entry key="M30" value="1.0" />
-      <entry key="H1" value="1.0" />
-      <entry key="H2" value="1.0" />
-      <entry key="H4" value="1.0" />
-      <entry key="D1" value="1.0" />
-      <entry key="W1" value="1.0" />
+      <entry key="S5" value="1.0000000000018592" />
+      <entry key="S10" value="1.0000036352194488" />
+      <entry key="S30" value="1.0608407960190795" />
+      <entry key="S60" value="1.6968182993135237" />
+      <entry key="M2" value="3.3605494426527223" />
+      <entry key="M5" value="5.941471691575742" />
+      <entry key="M10" value="7.446312162020628" />
+      <entry key="M15" value="8.116388807875826" />
+      <entry key="M30" value="8.938730517273363" />
+      <entry key="H1" value="9.432013581157735" />
+      <entry key="H2" value="9.705489745253365" />
+      <entry key="H4" value="9.84994956291091" />
+      <entry key="D1" value="9.974588295353003" />
+      <entry key="W1" value="9.99635967650757" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
@@ -79,23 +74,23 @@
       <entry key="W1" value="0.0" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.2634362349730635E-9" />
-      <entry key="MS500" value="0.016607744911852386" />
-      <entry key="S2" value="0.3589861276558588" />
-      <entry key="S5" value="0.663790551902614" />
-      <entry key="S10" value="0.8147334238280728" />
-      <entry key="S30" value="0.9339820099902785" />
-      <entry key="S60" value="0.9664274468320312" />
-      <entry key="M2" value="0.983070418043403" />
-      <entry key="M5" value="0.9931934599276637" />
-      <entry key="M10" value="0.9965909190473611" />
-      <entry key="M15" value="0.9977259860897045" />
-      <entry key="M30" value="0.9988623459164454" />
-      <entry key="H1" value="0.9994310110840294" />
-      <entry key="H2" value="0.9997154650619492" />
-      <entry key="H4" value="0.9998577224095182" />
-      <entry key="D1" value="0.999976285662373" />
-      <entry key="W1" value="0.9999966122030506" />
+      <entry key="MS100" value="0.9526379980439373" />
+      <entry key="MS500" value="0.9903428719330246" />
+      <entry key="S2" value="0.9975769252644544" />
+      <entry key="S5" value="0.999030064640521" />
+      <entry key="S10" value="0.999518355155789" />
+      <entry key="S30" value="1.0597196600570444" />
+      <entry key="S60" value="1.6913970541799983" />
+      <entry key="M2" value="3.3515838206274946" />
+      <entry key="M5" value="5.933872909415834" />
+      <entry key="M10" value="7.441004848173663" />
+      <entry key="M15" value="8.112272963900892" />
+      <entry key="M30" value="8.936250662091817" />
+      <entry key="H1" value="9.430629476856565" />
+      <entry key="H2" value="9.704755062348863" />
+      <entry key="H4" value="9.849570599105112" />
+      <entry key="D1" value="9.974523431091031" />
+      <entry key="W1" value="9.996350367242673" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -144,6 +139,15 @@
       <option name="presentableId" value="Default" />
       <updated>1792507520942</updated>
     </task>
+    <task id="LOCAL-00001" summary="Update menu alignment">
+      <option name="closed" value="true" />
+      <created>1792618072498</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1792618072498</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,6 +156,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="&quot;Finalize prototype milestone CRUD and file I/O persistence&quot;" />
     <MESSAGE value="Finalize prototype milestone CRUD and file I/O persistence" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finalize prototype milestone CRUD and file I/O persistence" />
+    <MESSAGE value="Update menu alignment" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update menu alignment" />
   </component>
 </project>
