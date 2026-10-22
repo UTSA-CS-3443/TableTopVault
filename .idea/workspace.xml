@@ -6,6 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="c1caaed2-6cc3-4484-8521-4ad542217d47" name="Changes" comment="Update menu alignment">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/utsa/cs3443/tabletopvault/group6/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/utsa/cs3443/tabletopvault/group6/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/utsa/cs3443/tabletopvault/group6/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/utsa/cs3443/tabletopvault/group6/model/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/utsa/cs3443/tabletopvault/group6/model/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/utsa/cs3443/tabletopvault/group6/model/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/utsa/cs3443/tabletopvault/group6/model/Rental.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/utsa/cs3443/tabletopvault/group6/model/Rental.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,12 +25,12 @@
     &quot;assignee&quot;: &quot;jkh3961&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/UTSA-CS-3443/TableTopVault.git&quot;,
-    &quot;accountId&quot;: &quot;3083bb7d-8d3a-4828-94ff-31925f6b71c7&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/UTSA-CS-3443/TableTopVault.git",
+    "accountId": "f08cd68c-3ab7-4c6b-9f9c-2557a8995e0c"
   }
-}</component>
+}]]></component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -37,60 +41,60 @@
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
       <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0" />
-      <entry key="S5" value="1.0000000000018592" />
-      <entry key="S10" value="1.0000036352194488" />
-      <entry key="S30" value="1.0608407960190795" />
-      <entry key="S60" value="1.6968182993135237" />
-      <entry key="M2" value="3.3605494426527223" />
-      <entry key="M5" value="5.941471691575742" />
-      <entry key="M10" value="7.446312162020628" />
-      <entry key="M15" value="8.116388807875826" />
-      <entry key="M30" value="8.938730517273363" />
-      <entry key="H1" value="9.432013581157735" />
-      <entry key="H2" value="9.705489745253365" />
-      <entry key="H4" value="9.84994956291091" />
-      <entry key="D1" value="9.974588295353003" />
-      <entry key="W1" value="9.99635967650757" />
+      <entry key="MS500" value="1.0000000000000682" />
+      <entry key="S2" value="1.000510783662008" />
+      <entry key="S5" value="1.0482275054706813" />
+      <entry key="S10" value="1.219608415381471" />
+      <entry key="S30" value="1.6400285481540782" />
+      <entry key="S60" value="2.3179832950071413" />
+      <entry key="M2" value="3.961744377702475" />
+      <entry key="M5" value="6.648705663166853" />
+      <entry key="M10" value="8.26053620314536" />
+      <entry key="M15" value="8.980825487583239" />
+      <entry key="M30" value="9.863766973366769" />
+      <entry key="H1" value="10.392380110653173" />
+      <entry key="H2" value="10.68507696813654" />
+      <entry key="H4" value="10.839585806803898" />
+      <entry key="D1" value="10.972838378627431" />
+      <entry key="W1" value="10.99610912391966" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="0.0" />
-      <entry key="S2" value="0.0" />
-      <entry key="S5" value="0.0" />
-      <entry key="S10" value="0.0" />
-      <entry key="S30" value="0.0" />
-      <entry key="S60" value="0.0" />
-      <entry key="M2" value="0.0" />
-      <entry key="M5" value="0.0" />
-      <entry key="M10" value="0.0" />
-      <entry key="M15" value="0.0" />
-      <entry key="M30" value="0.0" />
-      <entry key="H1" value="0.0" />
-      <entry key="H2" value="0.0" />
-      <entry key="H4" value="0.0" />
-      <entry key="D1" value="0.0" />
-      <entry key="W1" value="0.0" />
+      <entry key="MS100" value="1.284734260818016E-63" />
+      <entry key="MS500" value="2.640965094373589E-13" />
+      <entry key="S2" value="7.168704277510269E-4" />
+      <entry key="S5" value="0.05523015551781207" />
+      <entry key="S10" value="0.23501096893083964" />
+      <entry key="S30" value="0.6171101804525111" />
+      <entry key="S60" value="0.7855636068788516" />
+      <entry key="M2" value="0.8863202620265722" />
+      <entry key="M5" value="0.9528757423084996" />
+      <entry key="M10" value="0.9761535444326879" />
+      <entry key="M15" value="0.9840385001255907" />
+      <entry key="M30" value="0.9919871471574572" />
+      <entry key="H1" value="0.9959855155359727" />
+      <entry key="H2" value="0.9979907392035122" />
+      <entry key="H4" value="0.9989948644530222" />
+      <entry key="D1" value="0.9998324072061645" />
+      <entry key="W1" value="0.9999760564524974" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.9526379980439373" />
-      <entry key="MS500" value="0.9903428719330246" />
-      <entry key="S2" value="0.9975769252644544" />
-      <entry key="S5" value="0.999030064640521" />
-      <entry key="S10" value="0.999518355155789" />
-      <entry key="S30" value="1.0597196600570444" />
-      <entry key="S60" value="1.6913970541799983" />
-      <entry key="M2" value="3.3515838206274946" />
-      <entry key="M5" value="5.933872909415834" />
-      <entry key="M10" value="7.441004848173663" />
-      <entry key="M15" value="8.112272963900892" />
-      <entry key="M30" value="8.936250662091817" />
-      <entry key="H1" value="9.430629476856565" />
-      <entry key="H2" value="9.704755062348863" />
-      <entry key="H4" value="9.849570599105112" />
-      <entry key="D1" value="9.974523431091031" />
-      <entry key="W1" value="9.996350367242673" />
+      <entry key="MS100" value="0.8467453123625271" />
+      <entry key="MS500" value="0.9672763296140676" />
+      <entry key="S2" value="0.9927370603953227" />
+      <entry key="S5" value="1.0930866555971528" />
+      <entry key="S10" value="1.4374472909470413" />
+      <entry key="S30" value="2.242119738040677" />
+      <entry key="S60" value="3.0902332125725054" />
+      <entry key="M2" value="4.835031531595986" />
+      <entry key="M5" value="7.592150858955846" />
+      <entry key="M10" value="9.2303848542539" />
+      <entry key="M15" value="9.960057486183272" />
+      <entry key="M30" value="10.852912298510455" />
+      <entry key="H1" value="11.386795185566134" />
+      <entry key="H2" value="11.682238300255351" />
+      <entry key="H4" value="11.838153923117275" />
+      <entry key="D1" value="11.972597895715095" />
+      <entry key="W1" value="11.996074722999216" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -126,8 +130,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-30f59d01ecdd-34e2839f716b-intellij.indexing.shared.core-IU-262.9437.185" />
-        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.9437.185" />
+        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.27258.48" />
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.27258.48" />
       </set>
     </attachedChunks>
   </component>
@@ -147,7 +151,15 @@
       <option name="project" value="LOCAL" />
       <updated>1792618072498</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Update menu alignment">
+      <option name="closed" value="true" />
+      <created>1792630166709</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1792630166709</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -71,9 +71,7 @@ public class Main {
             System.out.println("********************************************************************************************************************************");
             switch (choice) {
                 case "1":
-                    System.out.printf("%-18s | %-11s | %-11s | %-12s | %-9s | %s%n",
-                            "Game Title", "Min Players", "Max Players",
-                            "Category", "Available", "Game Notes");
+                    System.out.printf("%-18s | %-11s | %-11s | %-12s | %-9s | %s%n", "Game Title", "Min Players", "Max Players", "Category", "Available", "Game Notes");
                     System.out.println("********************************************************************************************************************************");
 
 
@@ -155,9 +153,7 @@ public class Main {
 
             switch (choice) {
                 case "1":
-                    System.out.printf("%-18s | %-22s | %-13s | %-13s | %s%n",
-                            "Game Title", "Customer Name", "Checkout Date",
-                            "Return Date", "Returned");
+                    System.out.printf("%-18s | %-22s | %-13s | %-13s | %s%n", "Game Title", "Customer Name", "Checkout Date", "Return Date", "Returned");
                     System.out.println("********************************************************************************************************************************");
 
 
