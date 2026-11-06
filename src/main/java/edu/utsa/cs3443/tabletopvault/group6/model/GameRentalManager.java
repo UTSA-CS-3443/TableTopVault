@@ -1,10 +1,8 @@
 package edu.utsa.cs3443.tabletopvault.group6.model;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
+import edu.utsa.cs3443.tabletopvault.group6.controller.GameController;
+
+import java.io.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
@@ -15,10 +13,32 @@ import java.util.ArrayList;
  */
 public class GameRentalManager {
 
+
+    private Staff currentStaff;
+    public void setCurrentStaff(Staff staff) {
+        this.currentStaff = staff;
+    }
+
+    public Staff getCurrentStaff() {return currentStaff;}
+
+
+
     private final ArrayList<Game> games;
     private final ArrayList<Customer> customers;
     private final ArrayList<Rental> rentals;
     private final ArrayList<Staff> staffList;
+
+
+    private static GameRentalManager instance;
+    public static GameRentalManager getInstance() throws FileNotFoundException {
+        if(instance == null) {
+            instance = new GameRentalManager();
+            instance.loadGames();
+        }
+        return instance;
+    }
+
+
 
     /**
      * Initializes empty collections for games, customers, rentals, and staff.
@@ -49,7 +69,7 @@ public class GameRentalManager {
             String line;
             while ((line = br.readLine()) != null) {
                 if (line.isBlank()) continue;
-                String[] parts = line.split(",");
+                String[] parts = line.split(",", -1);
                 if (parts.length >= 6) {
                     String title = parts[0].trim();
                     int min = Integer.parseInt(parts[1].trim());
@@ -64,6 +84,8 @@ public class GameRentalManager {
             System.out.println("Note: Could not load data/games.txt or file is empty.");
         }
     }
+
+    public ArrayList<Game> getGamesList() {return games;}
 
     /**
      * Reads customer records from data/customers.txt into the in-memory customers list.
@@ -88,6 +110,14 @@ public class GameRentalManager {
             System.out.println("Note: Could not load data/customers.txt or file is empty.");
         }
     }
+
+
+    public ArrayList<Customer> getCustomersList() {return customers;}
+
+
+
+
+
 
     /**
      * Reads rental records from data/rentals.txt and links them to existing Game and Customer objects.
@@ -377,4 +407,7 @@ public class GameRentalManager {
             System.out.println("Error saving rentals: " + e.getMessage());
         }
     }
+
+
+    /////////////////////////////////////////////////////////////////////////////////
 }

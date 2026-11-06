@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.utsa.cs3443.tabletopvault.group6.controller.ListGamesController">
+   <children>
+       <TableView fx:id="gamesTableView" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="titleColumn" prefWidth="130.0" text="Game Title" />
+          <TableColumn fx:id="minPlayersColumn" prefWidth="70.0" text="Min Players" />
+            <TableColumn fx:id="maxPlayersColumn" text="Max Players" />
+            <TableColumn fx:id="categoryColumn" prefWidth="100.0" text="Category" />
+            <TableColumn fx:id="availableColumn" prefWidth="60.0" text="Available" />
+            <TableColumn fx:id="notesColumn" prefWidth="230.0" text="Notes " />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

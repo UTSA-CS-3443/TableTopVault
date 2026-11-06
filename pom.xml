@@ -63,7 +63,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>edu.utsa.cs3443.tabletopvault/edu.utsa.cs3443.tabletopvault.group6.controller.mainScreenController
+                            <mainClass>edu.utsa.cs3443.tabletopvault/edu.utsa.cs3443.tabletopvault.group6.controller.MainScreenController
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>

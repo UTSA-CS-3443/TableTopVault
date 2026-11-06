@@ -18,7 +18,7 @@ public abstract class Person {
      * @param email       the person's email address
      * @param phoneNumber the person's telephone number
      */
-    public Person(String fullName, String email, String phoneNumber) {
+    public  Person(String fullName, String email, String phoneNumber) {
         this.fullName = fullName;
         this.email = email;
         this.phoneNumber = phoneNumber;

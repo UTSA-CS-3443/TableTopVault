@@ -1,5 +1,9 @@
 package edu.utsa.cs3443.tabletopvault.group6.model;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 /**
  * Model class representing a TableTop Vault staff member.
  * Extends Person and includes staff login/schedule metadata and credential verification.
@@ -78,5 +82,32 @@ public class Staff extends Person {
     @Override
     public String toString() {
         return getFullName() + " | " + getEmail() + " | " + getPhoneNumber() + " | Info: " + username;
+    }
+
+
+    public static Staff getNewStaffObject(String username) {return new Staff("", "", "", "", "");}
+
+
+
+    public static Staff login(String username, String password) throws FileNotFoundException {
+        File file = new File("data/staff.txt");
+
+        try(Scanner scanner = new Scanner(file)) {
+            while (scanner.hasNextLine()) {
+                String line = scanner.nextLine();
+
+                String[] data = line.split(",");
+                if(data.length != 5) {
+                    continue;
+                }
+                if (data[3].equals(username) && data[4].equals(password)) {
+
+                    return new Staff(data[0], data[1], data[2], data[3], data[4]);
+                }
+
+            }
+
+        }
+        return null;
     }
 }

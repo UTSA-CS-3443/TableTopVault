@@ -128,6 +128,8 @@ public class Main {
         }
     }
 
+
+
     private static void runCheckoutMenu(GameRentalManager manager, Scanner scanner) {
         boolean checkoutRunning = true;
         while (checkoutRunning) {
