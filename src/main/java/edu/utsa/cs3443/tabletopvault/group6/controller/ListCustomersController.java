@@ -7,12 +7,9 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 
-
-import javafx.scene.control.ListView;
-import javafx.scene.control.TableView;
 
 import java.io.FileNotFoundException;
 import java.util.List;
@@ -32,9 +29,7 @@ public class ListCustomersController {
 
     @FXML
     void onShowCustomersListButtonClicked(ActionEvent event) {
-        customers = FXCollections.observableArrayList();
-
-
+       // customers = FXCollections.observableArrayList();
         if(gameRentalManager.getCustomersList().size() == 0) {
             totalCustomersLabel.setText("No Customers found!");
             return;
@@ -51,55 +46,59 @@ public class ListCustomersController {
 
 
 
-
     @FXML
     private TableView<Customer> customersTableView;
-     /*
 
-    ////////CHANGE THIS FOR CUSTOMERS  /////////////////////////////////////
-    /// /////////////////////////////////////////////////////////////////////////////////////////////
 
-    @FXML
-    private TableColumn<Game,String> titleColumn;
+
 
     @FXML
-    private TableColumn<Game, Integer> minPlayersColumn;
+    private TableColumn<Customer,String> fullNameColumn;
 
     @FXML
-    private TableColumn<Game, Integer> maxPlayersColumn;
+    private TableColumn<Customer, String> emailColumn;
 
     @FXML
-    private TableColumn<Game, String> categoryColumn;
+    private TableColumn<Customer, String> phoneNumberColumn;
+    @FXML
+    private TableColumn<Customer, String> preferredContactColumn;
 
     @FXML
-    private TableColumn<Game, Boolean> availableColumn;
+    private TableColumn<Customer, String> customerNotesColumn;
 
-    @FXML
-    private TableColumn<Game, String> notesColumn;
+   // @FXML
+   // private TableColumn<Game, Boolean> availableColumn;
+
+   // @FXML
+   // private TableColumn<Game, String> notesColumn;
 
     @FXML
     public void initialize() {
-        titleColumn.setText("Game Title");
-        minPlayersColumn.setText("Min Players");
-        maxPlayersColumn.setText("Max Players");
-        categoryColumn.setText("Category");
-        availableColumn.setText("Available");
-        notesColumn.setText("Notes");
+        fullNameColumn.setText("Full Name");
+        emailColumn.setText("Email");
+        phoneNumberColumn.setText("Phone Number");
+        preferredContactColumn.setText("Pref. Contact");
+        customerNotesColumn.setText("Customer Notes");
+        //availableColumn.setText("Available");
+       // notesColumn.setText("Notes");
 
-        titleColumn.setCellValueFactory(new PropertyValueFactory<>("gameTitle"));
+        fullNameColumn.setCellValueFactory(new PropertyValueFactory<>("fullName"));
 
-       minPlayersColumn.setCellValueFactory(new PropertyValueFactory<>("minPlayers"));
+       emailColumn.setCellValueFactory(new PropertyValueFactory<>("email"));
 
-        maxPlayersColumn.setCellValueFactory(new PropertyValueFactory<>("maxPlayers"));
+        phoneNumberColumn.setCellValueFactory(new PropertyValueFactory<>("phoneNumber"));
 
-        categoryColumn.setCellValueFactory(new PropertyValueFactory<>("category"));
+        preferredContactColumn.setCellValueFactory(new PropertyValueFactory<>("Pref. Contact"));
 
-        availableColumn.setCellValueFactory(new PropertyValueFactory<>("available"));
+        customerNotesColumn.setCellValueFactory(new PropertyValueFactory<>("Customer Notes"));
 
-        notesColumn.setCellValueFactory(new PropertyValueFactory<>("gameNotes"));
+       // notesColumn.setCellValueFactory(new PropertyValueFactory<>("gameNotes"));
     }
 
-     */
+
+
+
+
 
 
 

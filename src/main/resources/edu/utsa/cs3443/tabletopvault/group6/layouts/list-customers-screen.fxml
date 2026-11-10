@@ -1,16 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
 
-
-<SplitPane dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
-   <items>
-      <ListView prefHeight="200.0" prefWidth="200.0" />
-      <ScrollPane prefHeight="200.0" prefWidth="200.0">
-        <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
-        </content>
-      </ScrollPane>
-   </items>
-</SplitPane>
+<AnchorPane prefHeight="400.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.utsa.cs3443.tabletopvault.group6.controller.ListCustomersController">
+    <children>
+      <BorderPane prefHeight="400.0" prefWidth="650.0">
+         <top>
+              <TableView fx:id="customersTableView" prefHeight="400.0" prefWidth="606.0" BorderPane.alignment="CENTER">
+                  <columns>
+                      <TableColumn fx:id="fullNameColumn" prefWidth="122.00000250339508" text="Full Name" />
+                      <TableColumn fx:id="emailColumn" prefWidth="108.66661834716797" text="Email" />
+                      <TableColumn fx:id="phoneNumberColumn" prefWidth="108.00001525878906" text="Phone Number" />
+                  <TableColumn fx:id="preferredContactColumn" minWidth="0.0" prefWidth="98.6666259765625" text="Pref. Contact" />
+                      <TableColumn fx:id="customerNotesColumn" prefWidth="215.99996948242188" text="Customer Notes" />
+                  </columns>
+              </TableView>
+         </top>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+    </children>
+</AnchorPane>

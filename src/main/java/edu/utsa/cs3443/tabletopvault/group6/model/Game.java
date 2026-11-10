@@ -84,6 +84,7 @@ public class Game {
 
 
 
+
     /**
      * Returns the game's information in a formatted string.
      * Aligns the game title, minimum and maximum players,category, availability and notes

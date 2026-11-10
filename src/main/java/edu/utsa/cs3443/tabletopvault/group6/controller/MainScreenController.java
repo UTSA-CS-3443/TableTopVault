@@ -14,7 +14,7 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-
+import java.net.URL;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -146,22 +146,25 @@ public class MainScreenController {
 //////////////////////////////////////////////FXML/////////////////////////////////////////////////////////
 
 private void launchScreen(String fxml, String title) {
-    try {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/edu/utsa/cs3443/tabletopvault/group6/layouts/" + fxml + ".fxml"
-        ));
-        Scene scene = new Scene(fxmlLoader.load());
-        Stage stage = new Stage();
-        stage.setScene(scene);
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/edu/utsa/cs3443/tabletopvault/group6/layouts/" + fxml + ".fxml"
+            ));
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage stage = new Stage();
+            stage.setScene(scene);
 
-        stage.initModality(Modality.WINDOW_MODAL);
-        stage.initOwner(this.mainStage);
-        stage.setTitle(title);
-        stage.showAndWait();
-    }catch (IOException e) {
-        e.printStackTrace();
+            stage.initModality(Modality.WINDOW_MODAL);
+            stage.initOwner(this.mainStage);
+            stage.setTitle(title);
+            stage.showAndWait();
+        }catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
-}
+
+
     public void setMainStage(Stage stage) {this.mainStage = stage;}
 
     private void logout() {
@@ -257,6 +260,16 @@ private Button handleButtonClicked;
     @FXML
     void onFindGamesMenuItemClick(ActionEvent event) {launchScreen("find-games-screen", "Find Game");}
 
+
+
+    @FXML
+     void onListGamesMenuItemClick(ActionEvent event) {launchScreen("list-games-screen", "List Games");}
+
+
+
+
+
+    /*
     @FXML
     private void onListGamesMenuItemClick(ActionEvent event) {
         try {
@@ -274,6 +287,8 @@ private Button handleButtonClicked;
             e.printStackTrace();
         }
     }
+
+*/
 
 
     @FXML
@@ -301,7 +316,6 @@ private Button handleButtonClicked;
             e.printStackTrace();
         }
     }
-    /////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 

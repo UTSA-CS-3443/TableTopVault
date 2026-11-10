@@ -34,6 +34,9 @@ public class GameRentalManager {
         if(instance == null) {
             instance = new GameRentalManager();
             instance.loadGames();
+            instance.loadCustomers();
+            instance.loadRentals();
+            instance.loadStaff();
         }
         return instance;
     }
