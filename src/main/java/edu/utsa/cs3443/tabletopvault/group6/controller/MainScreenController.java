@@ -225,8 +225,7 @@ private Button handleButtonClicked;
 
     @FXML
     void onFindCustomersMenuItemClick(ActionEvent event) {launchScreen("find-customers-screen", "Find Customer");}
-  //  @FXML
-  // void onListCustomersMenuItemClick(ActionEvent event) {launchScreen("list-customers-screen", "List Customers");}
+
     @FXML
     void onUpdateCustomersMenuItemClick(ActionEvent event) {launchScreen("update-customers-screen", "Update Customer");}
 
@@ -273,14 +272,13 @@ private Button handleButtonClicked;
 
 
 
-    @FXML
-     void onListGamesMenuItemClick(ActionEvent event) {launchScreen("list-games-screen", "List Games");}
 
 
 
 
 
-    /*
+
+
     @FXML
     private void onListGamesMenuItemClick(ActionEvent event) {
         try {
@@ -299,7 +297,7 @@ private Button handleButtonClicked;
         }
     }
 
-*/
+
 
 
     @FXML
