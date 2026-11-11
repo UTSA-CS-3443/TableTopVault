@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1caaed2-6cc3-4484-8521-4ad542217d47" name="Changes" comment="Updated ListCustomersScreen" />
+    <list default="true" id="c1caaed2-6cc3-4484-8521-4ad542217d47" name="Changes" comment="Updated ListGamesScreen">
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/utsa/cs3443/tabletopvault/group6/controller/CheckinGameController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/utsa/cs3443/tabletopvault/group6/controller/CheckoutGameController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/edu/utsa/cs3443/tabletopvault/group6/layouts/checkin-game-screen.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/edu/utsa/cs3443/tabletopvault/group6/layouts/checkout-game-screen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -199,7 +205,15 @@
       <option name="project" value="LOCAL" />
       <updated>1794414037477</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Updated ListGamesScreen">
+      <option name="closed" value="true" />
+      <created>1794414348285</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1794414348285</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,7 +227,8 @@
     <MESSAGE value="Added controllers, FXMl screens. Created MainScreen and Login screen. All based off BankSystem App." />
     <MESSAGE value="Updated DeleteCustomersController, added to .txt files" />
     <MESSAGE value="Updated ListCustomersScreen" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated ListCustomersScreen" />
+    <MESSAGE value="Updated ListGamesScreen" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated ListGamesScreen" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

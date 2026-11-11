@@ -24,7 +24,7 @@
 
                   <VBox prefHeight="101.0" prefWidth="203.0" spacing="5.0">
                      <children>
-                        <TextField fx:id="usernameTextField" prefHeight="25.0" prefWidth="157.0" promptText="User1">
+                        <TextField fx:id="usernameTextField" prefHeight="25.0" prefWidth="157.0" promptText="1234">
                            <VBox.margin>
                               <Insets left="10.0" top="5.0" />
                            </VBox.margin></TextField>
