@@ -225,24 +225,35 @@ private Button handleButtonClicked;
 
     @FXML
     void onFindCustomersMenuItemClick(ActionEvent event) {launchScreen("find-customers-screen", "Find Customer");}
-    @FXML
-    void onListCustomersMenuItemClick(ActionEvent event) {launchScreen("list-customers-screen", "List Customers");}
+  //  @FXML
+  // void onListCustomersMenuItemClick(ActionEvent event) {launchScreen("list-customers-screen", "List Customers");}
     @FXML
     void onUpdateCustomersMenuItemClick(ActionEvent event) {launchScreen("update-customers-screen", "Update Customer");}
 
-    private void loadCustomersTable() {
-        try{
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/edu/utsa/cs3443/tabletopvault/group6/layouts/list-customers-screen.fxml"));
 
-            Parent CustomersView = loader.load();
-            ListCustomersController controller = loader.getController();
-            GameRentalManager manager = GameRentalManager.getInstance();
-            controller.setCustomers(manager.getCustomers());
-            mainBorderPane.setCenter(CustomersView);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    @FXML
+       private void onListCustomersMenuItemClick(ActionEvent event) {
+    try{
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/edu/utsa/cs3443/tabletopvault/group6/layouts/list-customers-screen.fxml"));
+
+        Parent customersView = loader.load();
+        ListCustomersController controller = loader.getController();
+        GameRentalManager manager = GameRentalManager.getInstance();
+        controller.setCustomers(manager.getCustomers());
+        mainBorderPane.setCenter(customersView);
+
+
+    } catch (Exception e) {
+        e.printStackTrace();
     }
+}
+
+
+
+
+
+
+
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 

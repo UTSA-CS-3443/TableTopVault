@@ -66,11 +66,7 @@ public class ListCustomersController {
     @FXML
     private TableColumn<Customer, String> customerNotesColumn;
 
-   // @FXML
-   // private TableColumn<Game, Boolean> availableColumn;
 
-   // @FXML
-   // private TableColumn<Game, String> notesColumn;
 
     @FXML
     public void initialize() {
@@ -79,8 +75,7 @@ public class ListCustomersController {
         phoneNumberColumn.setText("Phone Number");
         preferredContactColumn.setText("Pref. Contact");
         customerNotesColumn.setText("Customer Notes");
-        //availableColumn.setText("Available");
-       // notesColumn.setText("Notes");
+
 
         fullNameColumn.setCellValueFactory(new PropertyValueFactory<>("fullName"));
 
@@ -88,11 +83,11 @@ public class ListCustomersController {
 
         phoneNumberColumn.setCellValueFactory(new PropertyValueFactory<>("phoneNumber"));
 
-        preferredContactColumn.setCellValueFactory(new PropertyValueFactory<>("Pref. Contact"));
+        preferredContactColumn.setCellValueFactory(new PropertyValueFactory<>("preferredContact"));
 
-        customerNotesColumn.setCellValueFactory(new PropertyValueFactory<>("Customer Notes"));
+        customerNotesColumn.setCellValueFactory(new PropertyValueFactory<>("customerNotes"));
 
-       // notesColumn.setCellValueFactory(new PropertyValueFactory<>("gameNotes"));
+
     }
 
 
