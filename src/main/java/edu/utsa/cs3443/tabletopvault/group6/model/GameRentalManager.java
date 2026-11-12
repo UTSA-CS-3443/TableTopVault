@@ -193,6 +193,12 @@ public class GameRentalManager {
         return null;
     }
 
+
+
+
+
+
+
     /**
      * Finds a customer in the collection by full name (case-insensitive).
      *
@@ -361,6 +367,10 @@ public class GameRentalManager {
      * @param customerName full name of the borrowing customer
      * @return true if checkout succeeded, false otherwise
      */
+    public  boolean isCustomerExists(String name) {
+        return findCustomerByName(name) != null;
+    }
+
     public boolean checkoutGame(String gameTitle, String customerName) {
         Game targetGame = findGameByTitle(gameTitle);
         Customer targetCustomer = findCustomerByName(customerName);

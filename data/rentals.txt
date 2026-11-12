@@ -1,3 +1,4 @@
-Monopoly,Walter White,2026-10-15,Not returned,false
+Monopoly,Walter White,2026-10-15,2026-11-11,true
 Scattergories,Jessie Pinkman,2026-10-15,Not returned,false
 Catan,Bob Ross,2026-10-12,2026-10-17,true
+Catan,Jessie Pinkman,2026-11-11,Not returned,false

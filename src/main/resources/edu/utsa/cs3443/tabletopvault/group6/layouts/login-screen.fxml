@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.utsa.cs3443.tabletopvault.group6.controller.LoginScreenController">
+<AnchorPane prefHeight="400.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.utsa.cs3443.tabletopvault.group6.controller.LoginScreenController">
 
    <children>
       <BorderPane fx:id="loginBorderPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -13,7 +13,7 @@
          <top>
             <ToolBar prefHeight="104.0" prefWidth="700.0">
                <items>
-                  <Label prefHeight="41.0" prefWidth="464.0" text="TableTop Vault">
+                  <Label prefHeight="42.0" prefWidth="509.0" text="TableTop Vault">
                      <font>
                         <Font name="Georgia" size="36.0" />
                      </font>

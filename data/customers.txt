@@ -1,14 +1,11 @@
 Jessie Pinkman,pinkman2000@gmail.com,505-369-5100,Email,Leaves game instructions sticky
 Bob Ross,mountainpeak@gmail.com,214-985-6632,Text,No comment
 Walter White,walter.white@example.com,210-555-0101,Email,Prefers strategy games
-Saul Goodman,saul.goodman@example.com,210-555-0102,Text,Returns games early
 Zara Vellmont,zara.vellmont@example.com,210-555-0121,Email,Loves mystery board games
 Kellan Draywick,kellan.draywick@example.com,210-555-0122,Text,Prefers strategy games
 Mira Solven,mira.solven@example.com,210-555-0123,Phone,Usually rents two games
 Tobin Ashmere,tobin.ashmere@example.com,210-555-0124,Email,Enjoys cooperative games
-Elara Windell,elara.windell@example.com,210-555-0125,Text,Always returns games early
 Brennon Valecrest,brennon.valecrest@example.com,210-555-0126,Email,Prefers fantasy adventures
-Nyla Corvane,nyla.corvane@example.com,210-555-0127,Phone,New customer
 Daxen Morrell,daxen.morrell@example.com,210-555-0128,Text,Loves competitive card games
 Selina Thornwick,selina.thornwick@example.com,210-555-0129,Email,Enjoys puzzle games
 Orin Bellcrest,orin.bellcrest@example.com,210-555-0130,Phone,Prefers historical games
@@ -21,4 +18,3 @@ Rylan Frostmere,rylan.frostmere@example.com,210-555-0136,Phone,Enjoys adventure 
 Kaela Vosslyn,kaela.vosslyn@example.com,210-555-0137,Text,Prefers short games
 Dorian Emberfall,dorian.emberfall@example.com,210-555-0138,Email,Loves tabletop tournaments
 Soren Whitvale,soren.whitvale@example.com,210-555-0139,Phone,Enjoys detective games
-Talia Mooncrest,talia.mooncrest@example.com,210-555-0140,Text,Prefers cooperative adventures

@@ -1,0 +1,86 @@
+/* ===============================
+   ROOT
+================================= */
+.root {
+    -fx-font-family: "Segoe UI", "Inter", "Roboto", sans-serif;
+    -fx-background-color: linear-gradient(to bottom right, #f5f7fa, #e4ecf5);
+}
+
+/* ===============================
+   MENU BAR (Top & Bottom)
+================================= */
+.menu-bar {
+    -fx-background-color: #1f2937; /* dark modern navy */
+    -fx-padding: 6 10 6 10;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: rgba(255,255,255,0.08);
+}
+
+.menu-bar .label {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: 500;
+}
+
+/* Menu hover */
+.menu:hover,
+.menu:showing {
+    -fx-background-color: #374151;
+}
+
+/* Dropdown menu */
+.context-menu {
+    -fx-background-color: white;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-border-color: #e5e7eb;
+    -fx-padding: 6;
+}
+
+/* Menu items */
+.menu-item {
+    -fx-background-radius: 6;
+    -fx-padding: 8 16 8 16;
+}
+
+.menu-item .label {
+    -fx-text-fill: #111827;
+    -fx-font-size: 13px;
+}
+
+/* Hover effect for menu items */
+.menu-item:focused {
+    -fx-background-color: #2563eb;
+}
+
+.menu-item:focused .label {
+    -fx-text-fill: white;
+}
+
+/* ===============================
+   CENTER CONTENT (Card Look)
+================================= */
+.vbox {
+    -fx-background-color: white;
+    -fx-background-radius: 16;
+    -fx-padding: 25;
+    -fx-spacing: 15;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.12), 20, 0.2, 0, 5);
+}
+
+/* ===============================
+   WELCOME LABEL
+================================= */
+#welcomeLabel {
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #111827;
+}
+
+/* ===============================
+   IMAGE STYLING
+================================= */
+.image-view {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 15, 0.3, 0, 4);
+    -fx-background-radius: 12;
+}
