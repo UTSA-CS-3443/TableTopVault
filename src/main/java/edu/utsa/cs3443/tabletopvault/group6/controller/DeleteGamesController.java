@@ -10,105 +10,78 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
-
-import javafx.scene.image.Image;
 import javafx.scene.layout.HBox;
 
-import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.List;
 
+/**
+ * Controller for delete-games-screen.fxml.
+ * Renders a ListView of games with inline Delete buttons to remove titles from the inventory.
+ */
 public class DeleteGamesController {
 
-   // CHANGE ALL OF THIS TO FROM CUSTOMER TO GAME////////////////////////////////////////////////////
-/*//////////////////////////////////////////////////////////////////////////////////////////////////
-    private ObservableList<Customer> customers;
-
+    private ObservableList<Game> games;
 
     @FXML
-    private ListView<Customer> customersListView;
+    private ListView<Game> gamesListView;
 
     private GameRentalManager gameRentalManager;
 
     @FXML
-    private Label deleteCustomerLabel;
+    private Label deleteGameLabel;
 
-
-
+    /**
+     * Initializes the controller with the singleton GameRentalManager instance.
+     *
+     * @throws FileNotFoundException if data files cannot be accessed
+     */
     @FXML
     public void initialize() throws FileNotFoundException {
         gameRentalManager = GameRentalManager.getInstance();
     }
 
-
-
-
-
-
+    /**
+     * Populates the ListView with all games and attaches a custom cell factory with a Delete button.
+     *
+     * @param event Show List button click event
+     */
     @FXML
     void onShowListButtonClicked(ActionEvent event) {
-        customers = FXCollections.observableArrayList(gameRentalManager.getCustomersList());
+        games = FXCollections.observableArrayList(gameRentalManager.getGamesList());
+        gamesListView.setItems(games);
 
-        customersListView.setItems(customers);
-
-        // TODO: explain new idea
-        // public final void setCellFactory(Callback<ListView<T>, ListCell<T>> value)
-        // So the parameter is a Callback interface.
-        //     @FunctionalInterface
-        //     public interface Callback<P, R> {
-        //         R call(P param);
-        //     }
-        // In our example:
-        // P = ListView<User>
-        // R = ListCell<User>
-        // Given a ListView<> lv, return a new ListCell<> instance that knows how to render each item.
-        customersListView.setCellFactory(lv -> new ListCell<Customer>() {
-
-
-
-            private final Button myButton = new Button("delete");
+        gamesListView.setCellFactory(lv -> new ListCell<Game>() {
+            private final Button deleteButton = new Button("Delete");
+            private final Label label = new Label();
+            private final HBox hbox = new HBox(10, label, deleteButton);
 
             {
-                myButton.setOnAction(e -> {
-                    Customer customer = getItem();
-                    if(customer != null) {
-                        boolean removed = gameRentalManager.removeCustomer(customer.getFullName());
-
+                deleteButton.setOnAction(e -> {
+                    Game game = getItem();
+                    if (game != null) {
+                        boolean removed = gameRentalManager.removeGame(game.getGameTitle());
                         if (removed) {
-                            customers.removeIf(c -> c.getFullName().equalsIgnoreCase(customer.getFullName()));
-                            deleteCustomerLabel.setText("Deleted Customer: " + customer.getFullName());
+                            games.removeIf(g -> g.getGameTitle().equalsIgnoreCase(game.getGameTitle()));
+                            deleteGameLabel.setText("Deleted Game: " + game.getGameTitle());
                         } else {
-                            deleteCustomerLabel.setText("Customer could not be deleted");
+                            deleteGameLabel.setText("Game could not be deleted.");
                         }
                     }
-
                 });
             }
 
-            //private final ImageView imageView = new ImageView();
-            private final Label label = new Label();
-            private final HBox hbox = new HBox(10,  label, myButton);
-
-
-
             @Override
-            protected void updateItem(Customer customer, boolean empty) {
-                super.updateItem(customer, empty);
-
-                if (empty || customer == null) {
+            protected void updateItem(Game game, boolean empty) {
+                super.updateItem(game, empty);
+                if (empty || game == null) {
                     setText(null);
                     setGraphic(null);
                 } else {
-                    label.setText(customer.getFullName());
+                    label.setText(game.getGameTitle() + " (" + game.getCategory() + ")");
                     setText(null);
                     setGraphic(hbox);
                 }
             }
-            });
-        }
-        */
-
-
+        });
     }
-
-
+}

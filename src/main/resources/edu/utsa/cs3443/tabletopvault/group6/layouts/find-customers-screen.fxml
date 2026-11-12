@@ -1,14 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="edu.utsa.cs3443.tabletopvault.group6.controller.FindCustomersController"
-            prefHeight="400.0" prefWidth="600.0">
-
-</AnchorPane>
+<VBox spacing="15.0" prefHeight="340.0" prefWidth="480.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.utsa.cs3443.tabletopvault.group6.controller.FindCustomersController">
+    <padding>
+        <Insets bottom="20.0" left="25.0" right="25.0" top="20.0" />
+    </padding>
+    <children>
+        <Label text="Find a Customer">
+            <font>
+                <Font name="Georgia" size="22.0" />
+            </font>
+        </Label>
+        <HBox spacing="10.0">
+            <children>
+                <TextField fx:id="customerNameTextField" prefWidth="300.0" promptText="Enter customer full name (e.g., Bob Ross)" />
+                <Button mnemonicParsing="false" onAction="#onFindCustomerButtonClicked" text="Search" />
+            </children>
+        </HBox>
+        <Label fx:id="searchResultLabel" wrapText="true" prefHeight="180.0" prefWidth="420.0" />
+    </children>
+</VBox>

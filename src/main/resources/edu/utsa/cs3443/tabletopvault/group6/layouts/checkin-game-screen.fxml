@@ -1,14 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="CONTROLLER_NAME"
-            prefHeight="400.0" prefWidth="600.0">
-
-</AnchorPane>
+<VBox spacing="12.0" prefHeight="420.0" prefWidth="560.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.utsa.cs3443.tabletopvault.group6.controller.CheckinGameController">
+    <padding>
+        <Insets bottom="20.0" left="25.0" right="25.0" top="20.0" />
+    </padding>
+    <children>
+        <Label text="Return / Check-In Game">
+            <font>
+                <Font name="Georgia" size="22.0" />
+            </font>
+        </Label>
+        <Label text="Select Active Rental to Return:" />
+        <ComboBox fx:id="activeRentalsComboBox" prefWidth="480.0" promptText="Choose an active checkout..." />
+        <Button mnemonicParsing="false" onAction="#onReturnGameButtonClicked" text="Process Return" />
+        <Label fx:id="checkinStatusLabel" wrapText="true" textFill="#1b5e20" />
+        <Label text="All Rental Records:" />
+        <ListView fx:id="rentalHistoryListView" prefHeight="170.0" prefWidth="500.0" />
+    </children>
+</VBox>

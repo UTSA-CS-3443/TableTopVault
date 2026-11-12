@@ -1,12 +1,12 @@
 Catan,3,4,Strategy,true,No comment
-Scattergories,2,6,Party,true,Instruction book is sticky
+Scattergories,2,6,Party,false,Instruction book is sticky
 Scabble,2,4,Party,true,No comment
 Battleship,2,2,Strategy,true,No comment
 Ticket to Ride,2,5,Strategy,true,No comment
 Carcassonne,2,5,Strategy,true,No comment
 Pandemic,2,4,Cooperative,true,Missing one player reference card
 Clue,2,6,Mystery,true,No comment
-Monopoly,2,8,Family,true,Box has minor damage
+Monopoly,2,8,Family,false,Box has minor damage
 Risk,2,6,Strategy,true,No comment
 Uno,2,10,Card,true,No comment
 Exploding Kittens,2,5,Card,true,No comment

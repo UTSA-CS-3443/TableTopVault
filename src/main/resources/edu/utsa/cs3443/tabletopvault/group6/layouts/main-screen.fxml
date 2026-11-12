@@ -10,20 +10,15 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.utsa.cs3443.tabletopvault.group6.controller.MainScreenController">
-
+<AnchorPane prefHeight="450.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.utsa.cs3443.tabletopvault.group6.controller.MainScreenController">
     <children>
-
         <BorderPane fx:id="mainBorderPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-
             <top>
                 <HBox>
                     <children>
-                        <ToolBar maxWidth="1.7976931348623157E308" prefHeight="90.0" prefWidth="700.0" HBox.hgrow="ALWAYS">
-
+                        <ToolBar maxWidth="1.7976931348623157E308" prefHeight="90.0" prefWidth="750.0" HBox.hgrow="ALWAYS">
                             <items>
-
-                                <Label prefHeight="35.0" prefWidth="335.0" text="TableTop Vault">
+                                <Label prefHeight="35.0" prefWidth="310.0" text="TableTop Vault">
                                     <padding>
                                         <Insets left="10.0" right="10.0" />
                                     </padding>
@@ -31,55 +26,43 @@
                                         <Font name="Georgia" size="30.0" />
                                     </font>
                                 </Label>
-
                                 <MenuButton mnemonicParsing="false" text="The Shelf">
                                     <items>
                                         <MenuItem onAction="#onFindGamesMenuItemClick" text="Find Games" />
-
-                                        <MenuItem onAction="#onListGamesMenuItemClick" text="List Game" />
-
+                                        <MenuItem onAction="#onListGamesMenuItemClick" text="List Games" />
                                         <MenuItem onAction="#onAddNewGamesMenuItemClick" text="Add Game" />
-
                                         <MenuItem onAction="#onUpdateGamesMenuItemClick" text="Update Games" />
-
                                         <MenuItem onAction="#onDeleteGamesMenuItemClick" text="Delete Games" />
                                     </items>
                                 </MenuButton>
-
                                 <MenuButton mnemonicParsing="false" text="Customers">
                                     <items>
                                         <MenuItem onAction="#onFindCustomersMenuItemClick" text="Find Customer" />
-
-                                        <MenuItem onAction="#onListCustomersMenuItemClick" text="List Customer" />
-
-                                        <MenuItem onAction="#onAddNewCustomersMenuItemClick" text="Add Customers" />
-
-                                        <MenuItem onAction="#onUpdateCustomersMenuItemClick" text="Update Customers" />
-
+                                        <MenuItem onAction="#onListCustomersMenuItemClick" text="List Customers" />
+                                        <MenuItem onAction="#onAddNewCustomersMenuItemClick" text="Add Customer" />
+                                        <MenuItem onAction="#onUpdateCustomersMenuItemClick" text="Update Customer" />
                                         <MenuItem onAction="#onDeleteCustomersMenuItemClick" text="Delete Customers" />
                                     </items>
                                 </MenuButton>
-
                                 <MenuButton mnemonicParsing="false" text="Checkout/In">
                                     <items>
-                                        <MenuItem text="Checkout Game" />
-                                        <MenuItem text="Checkin Game" />
+                                        <MenuItem onAction="#onCheckoutGameMenuItemClick" text="Checkout Game" />
+                                        <MenuItem onAction="#onCheckinGameMenuItemClick" text="Checkin Game" />
                                     </items>
                                 </MenuButton>
-
-                                <MenuButton fx:id="logoutMenu" mnemonicParsing="false" text="Staff" />
-
+                                <MenuButton fx:id="logoutMenu" mnemonicParsing="false" text="Staff">
+                                    <items>
+                                        <MenuItem onAction="#onLogoutMenuButtonClick" text="Logout" />
+                                    </items>
+                                </MenuButton>
                             </items>
-
                         </ToolBar>
                     </children>
                 </HBox>
             </top>
-
             <center>
                 <AnchorPane />
             </center>
         </BorderPane>
-
     </children>
 </AnchorPane>

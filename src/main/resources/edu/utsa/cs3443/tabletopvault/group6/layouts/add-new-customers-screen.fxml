@@ -10,37 +10,38 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.utsa.cs3443.tabletopvault.group6.controller.AddNewCustomersController">
+<AnchorPane prefHeight="420.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.utsa.cs3443.tabletopvault.group6.controller.AddNewCustomersController">
    <children>
-      <TextArea fx:id="customerNotesTextArea" layoutX="14.0" layoutY="272.0" prefHeight="107.0" prefWidth="314.0" />
-      <Label layoutX="15.0" layoutY="254.0" prefHeight="18.0" prefWidth="126.0" text="Customer Notes" />
-      <TextField fx:id="emailTextField" layoutX="21.0" layoutY="149.0" />
-      <TextField fx:id="phoneNumberTextField" layoutX="184.0" layoutY="149.0" />
-      <TextField fx:id="fullNameTextField" layoutX="22.0" layoutY="95.0" prefHeight="26.0" prefWidth="297.0" />
-      <MenuButton layoutX="22.0" layoutY="200.0" mnemonicParsing="false" text="Preferred Contact">
-        <items>
-          <MenuItem mnemonicParsing="false" text="Action 1">
-               <graphic>
-                  <CheckBox mnemonicParsing="false" text="Email" />
-               </graphic>
-            </MenuItem>
-          <MenuItem mnemonicParsing="false" text="Action 2">
-               <graphic>
-                  <CheckBox mnemonicParsing="false" text="Text" />
-               </graphic>
-            </MenuItem>
-        </items>
-      </MenuButton>
-      <Label layoutX="21.0" layoutY="77.0" text="Full Name" />
-      <Label layoutX="21.0" layoutY="127.0" prefHeight="18.0" prefWidth="43.0" text="Email" />
-      <Label layoutX="184.0" layoutY="127.0" text="Phone Number" />
-      <TextArea fx:id="gamesCheckedoutTextArea" layoutX="357.0" layoutY="163.0" prefHeight="168.0" prefWidth="226.0" />
-      <Label layoutX="357.0" layoutY="135.0" prefHeight="18.0" prefWidth="126.0" text="Games Checkedout" />
-      <Label layoutX="32.0" layoutY="14.0" prefHeight="39.0" prefWidth="218.0" text="New Customer">
+      <Label layoutX="22.0" layoutY="14.0" prefHeight="39.0" prefWidth="250.0" text="New Customer">
          <font>
             <Font name="Georgia" size="25.0" />
          </font>
       </Label>
-      <Button fx:id="onAddCustomerClicked" layoutX="434.0" layoutY="346.0" mnemonicParsing="false" text="Add Customer" />
+      <Label layoutX="21.0" layoutY="70.0" text="Full Name" />
+      <TextField fx:id="fullNameTextField" layoutX="21.0" layoutY="90.0" prefHeight="26.0" prefWidth="297.0" />
+      <Label layoutX="21.0" layoutY="125.0" text="Email" />
+      <TextField fx:id="emailTextField" layoutX="21.0" layoutY="145.0" prefWidth="150.0" />
+      <Label layoutX="184.0" layoutY="125.0" text="Phone Number" />
+      <TextField fx:id="phoneNumberTextField" layoutX="184.0" layoutY="145.0" prefWidth="135.0" />
+      <MenuButton layoutX="21.0" layoutY="190.0" mnemonicParsing="false" text="Preferred Contact">
+        <items>
+          <MenuItem mnemonicParsing="false">
+               <graphic>
+                  <CheckBox fx:id="emailCheckBox" selected="true" mnemonicParsing="false" text="Email" />
+               </graphic>
+            </MenuItem>
+          <MenuItem mnemonicParsing="false">
+               <graphic>
+                  <CheckBox fx:id="textCheckBox" mnemonicParsing="false" text="Text" />
+               </graphic>
+            </MenuItem>
+        </items>
+      </MenuButton>
+      <Label layoutX="21.0" layoutY="235.0" text="Customer Notes" />
+      <TextArea fx:id="customerNotesTextArea" layoutX="21.0" layoutY="255.0" prefHeight="105.0" prefWidth="300.0" />
+      <Label layoutX="355.0" layoutY="125.0" text="Games Checked Out" />
+      <TextArea fx:id="gamesCheckedoutTextArea" layoutX="355.0" layoutY="145.0" prefHeight="168.0" prefWidth="220.0" />
+      <Button fx:id="onAddCustomerClicked" layoutX="420.0" layoutY="335.0" mnemonicParsing="false" onAction="#handleAddCustomer" text="Add Customer" />
+      <Label fx:id="statusLabel" layoutX="21.0" layoutY="375.0" prefWidth="550.0" textFill="#1b5e20" />
    </children>
 </AnchorPane>

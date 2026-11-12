@@ -1,7 +1,6 @@
 package edu.utsa.cs3443.tabletopvault.group6.controller;
 
 import edu.utsa.cs3443.tabletopvault.group6.model.Customer;
-import edu.utsa.cs3443.tabletopvault.group6.model.Game;
 import edu.utsa.cs3443.tabletopvault.group6.model.GameRentalManager;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -11,17 +10,17 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 
-import java.io.File;
 import java.io.FileNotFoundException;
 
+/**
+ * Controller for delete-customers-screen.fxml.
+ * Displays registered customers in a ListView with inline delete buttons for account removal.
+ */
 public class DeleteCustomersController {
 
     private ObservableList<Customer> customers;
-
 
     @FXML
     private ListView<Customer> customersListView;
@@ -31,47 +30,36 @@ public class DeleteCustomersController {
     @FXML
     private Label deleteCustomerLabel;
 
-
-
+    /**
+     * Initializes the controller with the singleton GameRentalManager instance.
+     *
+     * @throws FileNotFoundException if data files cannot be accessed
+     */
     @FXML
     public void initialize() throws FileNotFoundException {
         gameRentalManager = GameRentalManager.getInstance();
     }
 
-
-
-
-
-
+    /**
+     * Populates the ListView with all customers and attaches a custom ListCell containing a delete button.
+     *
+     * @param event Show List button click event
+     */
     @FXML
     void onShowListButtonClicked(ActionEvent event) {
         customers = FXCollections.observableArrayList(gameRentalManager.getCustomersList());
-
         customersListView.setItems(customers);
 
-        // TODO: explain new idea
-        // public final void setCellFactory(Callback<ListView<T>, ListCell<T>> value)
-        // So the parameter is a Callback interface.
-        //     @FunctionalInterface
-        //     public interface Callback<P, R> {
-        //         R call(P param);
-        //     }
-        // In our example:
-        // P = ListView<User>
-        // R = ListCell<User>
-        // Given a ListView<> lv, return a new ListCell<> instance that knows how to render each item.
         customersListView.setCellFactory(lv -> new ListCell<Customer>() {
-
-
-
             private final Button myButton = new Button("delete");
+            private final Label label = new Label();
+            private final HBox hbox = new HBox(10, label, myButton);
 
             {
                 myButton.setOnAction(e -> {
                     Customer customer = getItem();
-                    if(customer != null) {
+                    if (customer != null) {
                         boolean removed = gameRentalManager.removeCustomer(customer.getFullName());
-
                         if (removed) {
                             customers.removeIf(c -> c.getFullName().equalsIgnoreCase(customer.getFullName()));
                             deleteCustomerLabel.setText("Deleted Customer: " + customer.getFullName());
@@ -79,20 +67,12 @@ public class DeleteCustomersController {
                             deleteCustomerLabel.setText("Customer could not be deleted");
                         }
                     }
-
                 });
             }
-
-            //private final ImageView imageView = new ImageView();
-            private final Label label = new Label();
-            private final HBox hbox = new HBox(10,  label, myButton);
-
-
 
             @Override
             protected void updateItem(Customer customer, boolean empty) {
                 super.updateItem(customer, empty);
-
                 if (empty || customer == null) {
                     setText(null);
                     setGraphic(null);
@@ -102,6 +82,6 @@ public class DeleteCustomersController {
                     setGraphic(hbox);
                 }
             }
-            });
-        }
+        });
     }
+}

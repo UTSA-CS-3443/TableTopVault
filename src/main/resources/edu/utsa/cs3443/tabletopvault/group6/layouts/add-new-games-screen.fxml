@@ -8,60 +8,45 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
-
-<VBox prefHeight="450.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
+<VBox spacing="10.0" prefHeight="420.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.utsa.cs3443.tabletopvault.group6.controller.AddNewGamesController">
+   <padding>
+      <Insets bottom="20.0" left="25.0" right="25.0" top="20.0" />
+   </padding>
    <children>
       <Label text="Add New Game">
          <font>
-            <Font name="Georgia" size="17.0" />
+            <Font name="Georgia" size="22.0" />
          </font>
-         <VBox.margin>
-            <Insets left="60.0" top="20.0" />
-         </VBox.margin>
       </Label>
-      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
-         <VBox.margin>
-            <Insets top="60.0" />
-         </VBox.margin>
-      </Text>
-      <TextField />
-      <HBox prefHeight="53.0" prefWidth="240.0">
+      <Label text="Game Title:" />
+      <TextField fx:id="titleTextField" promptText="e.g., Terraforming Mars" />
+      <HBox spacing="15.0">
          <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-            <TextField prefHeight="25.0" prefWidth="88.0">
-               <HBox.margin>
-                  <Insets top="10.0" />
-               </HBox.margin>
-            </TextField>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="22.13671875" />
-            <TextField prefHeight="25.0" prefWidth="79.0">
-               <HBox.margin>
-                  <Insets top="10.0" />
-               </HBox.margin>
-            </TextField>
-         </children>
-         <VBox.margin>
-            <Insets top="20.0" />
-         </VBox.margin>
-      </HBox>
-      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <TextField />
-      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Notes">
-         <VBox.margin>
-            <Insets left="20.0" top="10.0" />
-         </VBox.margin>
-      </Text>
-      <TextArea prefHeight="71.0" prefWidth="240.0" />
-      <HBox prefHeight="35.0" prefWidth="240.0">
-         <VBox.margin>
-            <Insets top="10.0" />
-         </VBox.margin>
-         <children>
-            <Button mnemonicParsing="false" text="Button" />
-            <Button mnemonicParsing="false" text="Button" />
+            <VBox spacing="5.0">
+               <children>
+                  <Label text="Min Players:" />
+                  <TextField fx:id="minPlayersTextField" prefWidth="100.0" promptText="1" />
+               </children>
+            </VBox>
+            <VBox spacing="5.0">
+               <children>
+                  <Label text="Max Players:" />
+                  <TextField fx:id="maxPlayersTextField" prefWidth="100.0" promptText="5" />
+               </children>
+            </VBox>
          </children>
       </HBox>
+      <Label text="Category:" />
+      <TextField fx:id="categoryTextField" promptText="e.g., Strategy, Party, Cooperative" />
+      <Label text="Condition / Game Notes:" />
+      <TextArea fx:id="notesTextArea" prefHeight="70.0" promptText="No comment" />
+      <HBox spacing="15.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#onAddGameButtonClicked" text="Save Game" />
+            <Button mnemonicParsing="false" onAction="#onClearButtonClicked" text="Clear" />
+         </children>
+      </HBox>
+      <Label fx:id="statusLabel" textFill="#1b5e20" />
    </children>
 </VBox>
