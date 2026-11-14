@@ -4,44 +4,59 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1caaed2-6cc3-4484-8521-4ad542217d47" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/edu/utsa/cs3443/tabletopvault/group6/layouts/styles/theme.css" afterDir="false" />
+    <list default="true" id="34378838-7ebd-4b7b-990b-e20a714d9dc2" name="Changes" comment="changed from .txt to csv">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/customers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/customers.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/games.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/games.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/rentals.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/rentals.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/customers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/customers.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/games.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/games.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/rentals.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/rentals.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/staff.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/staff.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/utsa/cs3443/tabletopvault/group6/controller/AddNewCustomersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/utsa/cs3443/tabletopvault/group6/controller/AddNewCustomersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/utsa/cs3443/tabletopvault/group6/controller/AddNewGamesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/utsa/cs3443/tabletopvault/group6/controller/AddNewGamesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/utsa/cs3443/tabletopvault/group6/controller/CheckoutGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/utsa/cs3443/tabletopvault/group6/controller/CheckoutGameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/utsa/cs3443/tabletopvault/group6/controller/LoginScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/utsa/cs3443/tabletopvault/group6/controller/LoginScreenController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/utsa/cs3443/tabletopvault/group6/controller/UpdateCustomersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/utsa/cs3443/tabletopvault/group6/controller/UpdateCustomersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/utsa/cs3443/tabletopvault/group6/controller/UpdateGamesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/utsa/cs3443/tabletopvault/group6/controller/UpdateGamesController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/utsa/cs3443/tabletopvault/group6/model/GameRentalManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/utsa/cs3443/tabletopvault/group6/model/GameRentalManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/edu/utsa/cs3443/tabletopvault/group6/layouts/list-customers-screen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/edu/utsa/cs3443/tabletopvault/group6/layouts/list-customers-screen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/edu/utsa/cs3443/tabletopvault/group6/layouts/list-games-screen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/edu/utsa/cs3443/tabletopvault/group6/layouts/list-games-screen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/edu/utsa/cs3443/tabletopvault/group6/layouts/login-screen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/edu/utsa/cs3443/tabletopvault/group6/layouts/login-screen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/utsa/cs3443/tabletopvault/group6/model/Staff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/utsa/cs3443/tabletopvault/group6/model/Staff.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="27" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
-        <option value="FxmlFile" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="INCOMING_COMMITS_CHECK_STRATEGY" value="FETCH" />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
     &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;jkh3961&quot;
+    &quot;assignee&quot;: &quot;obadamusa&quot;
   }
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/UTSA-CS-3443/TableTopVault.git&quot;,
-    &quot;accountId&quot;: &quot;6a004913-9892-45c6-b353-a5c06210a6e1&quot;
+    &quot;accountId&quot;: &quot;66d72c97-bacc-4195-be23-e1215b0348d7&quot;
   }
 }</component>
   <component name="MavenImportPreferences">
@@ -51,190 +66,155 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0000000128062698" />
-      <entry key="MS500" value="1.0354023164271455" />
-      <entry key="S2" value="2.1310003135079065" />
-      <entry key="S5" value="4.568954696398411" />
-      <entry key="S10" value="7.001099048284343" />
-      <entry key="S30" value="9.901926804704296" />
-      <entry key="S60" value="10.88375790292426" />
-      <entry key="M2" value="11.42408487804632" />
-      <entry key="M5" value="11.894637857675885" />
-      <entry key="M10" value="13.034951407001376" />
-      <entry key="M15" value="14.337819301694674" />
-      <entry key="M30" value="17.077307017644163" />
-      <entry key="H1" value="19.465270214260958" />
-      <entry key="H2" value="21.05823307644847" />
-      <entry key="H4" value="21.980847822939733" />
-      <entry key="D1" value="22.822997435267087" />
-      <entry key="W1" value="22.97453290934787" />
+      <entry key="MS100" value="1.0001854095136704" />
+      <entry key="MS500" value="1.282918388621678" />
+      <entry key="S2" value="2.877467477263103" />
+      <entry key="S5" value="4.692970899229391" />
+      <entry key="S10" value="5.969786085432275" />
+      <entry key="S30" value="7.219443995197568" />
+      <entry key="S60" value="7.796375968507182" />
+      <entry key="M2" value="9.731375595960781" />
+      <entry key="M5" value="19.876873857642103" />
+      <entry key="M10" value="32.015178345435835" />
+      <entry key="M15" value="39.465405077234074" />
+      <entry key="M30" value="52.986956739893635" />
+      <entry key="H1" value="66.27841813241979" />
+      <entry key="H2" value="76.59045069134747" />
+      <entry key="H4" value="83.17407520629503" />
+      <entry key="D1" value="89.59815942495112" />
+      <entry key="W1" value="90.79718628383974" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
       <entry key="MS500" value="0.0" />
-      <entry key="S2" value="2.0998767758596453E-260" />
-      <entry key="S5" value="1.3454808600669207E-104" />
-      <entry key="S10" value="1.1599486454438058E-52" />
-      <entry key="S30" value="4.8769269898626125E-18" />
-      <entry key="S60" value="2.2083765507409755E-9" />
-      <entry key="M2" value="4.699336709303745E-5" />
-      <entry key="M5" value="0.018570116375957606" />
-      <entry key="M10" value="0.13627221424765068" />
-      <entry key="M15" value="0.2648123336120651" />
-      <entry key="M30" value="0.5145991970573458" />
-      <entry key="H1" value="0.7173556977241804" />
-      <entry key="H2" value="0.8469685340815092" />
-      <entry key="H4" value="0.9203089340441662" />
-      <entry key="D1" value="0.9862543680287139" />
-      <entry key="W1" value="0.9980246709774659" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="2.065422059717165E-133" />
+      <entry key="S10" value="4.5446914743656286E-67" />
+      <entry key="S30" value="7.688379319598055E-23" />
+      <entry key="S60" value="8.768340397487923E-12" />
+      <entry key="M2" value="2.961227100709965E-6" />
+      <entry key="M5" value="0.0062633103690925675" />
+      <entry key="M10" value="0.09292162366130376" />
+      <entry key="M15" value="0.25720869853051676" />
+      <entry key="M30" value="0.8102188274584252" />
+      <entry key="H1" value="1.5270629862730427" />
+      <entry key="H2" value="2.129523301032951" />
+      <entry key="H4" value="2.5244112924230406" />
+      <entry key="D1" value="2.914429292431933" />
+      <entry key="W1" value="2.987611082249855" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="4.451948713882092E-7" />
-      <entry key="MS500" value="0.08641612310997147" />
-      <entry key="S2" value="1.5020115524581181" />
-      <entry key="S5" value="4.18314324984166" />
-      <entry key="S10" value="6.769144864023496" />
-      <entry key="S30" value="9.813283848152741" />
-      <entry key="S60" value="10.837812072079327" />
-      <entry key="M2" value="11.40073452230038" />
-      <entry key="M5" value="11.90356147274938" />
-      <entry key="M10" value="13.165594551536348" />
-      <entry key="M15" value="14.598168322921822" />
-      <entry key="M30" value="17.58884511947049" />
-      <entry key="H1" value="20.180700874229206" />
-      <entry key="H2" value="21.90410062551921" />
-      <entry key="H4" value="22.90056504649782" />
-      <entry key="D1" value="23.809146802914473" />
-      <entry key="W1" value="23.972542414664254" />
+      <entry key="MS100" value="0.9661167136530558" />
+      <entry key="MS500" value="1.274588486760399" />
+      <entry key="S2" value="2.8732987408565402" />
+      <entry key="S5" value="4.69006865117723" />
+      <entry key="S10" value="5.967843800055674" />
+      <entry key="S30" value="7.218628011439664" />
+      <entry key="S60" value="7.79590295694599" />
+      <entry key="M2" value="9.730533177629887" />
+      <entry key="M5" value="19.879982281248445" />
+      <entry key="M10" value="32.10344685164242" />
+      <entry key="M15" value="39.717362235462836" />
+      <entry key="M30" value="53.7916238069982" />
+      <entry key="H1" value="67.8009439008311" />
+      <entry key="H2" value="78.71698139248025" />
+      <entry key="H4" value="85.69675494643238" />
+      <entry key="D1" value="92.512261579913" />
+      <entry key="W1" value="93.78474960129641" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 5,
+  &quot;associatedIndex&quot;: 8,
   &quot;fromUser&quot;: false
 }</component>
-  <component name="ProjectId" id="3KxmJHSN0fEYpiN6BmTy3Wimn7w" />
+  <component name="ProjectId" id="3KtPdIgQNjUIuqyC1369h6GCLqR" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.TableTopVaultApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.TableTopVault [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.TableTopVault [compile].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;git.auto.fetch.suggestion.counter&quot;: &quot;1&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_directory_selection&quot;: &quot;C:/Users/Sylvia/IdeaProjects/TableTopVault-Group/src/main/java&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "Application.TableTopVaultApplication.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.jshint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.jshint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "project.propCompiler",
+    "to.speed.mode.migration.done": "true"
   }
-}</component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-30f59d01ecdd-34e2839f716b-intellij.indexing.shared.core-IU-262.9437.185" />
-        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.9437.185" />
+        <option value="bundled-jdk-30f59d01ecdd-ac68fc9d2b05-intellij.indexing.shared.core-IU-263.7307.200" />
+        <option value="bundled-js-predefined-d6986cc7102b-56aff7b04f6f-JavaScript-IU-263.7307.200" />
       </set>
     </attachedChunks>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c1caaed2-6cc3-4484-8521-4ad542217d47" name="Changes" comment="" />
-      <created>1792507520942</created>
+      <changelist id="34378838-7ebd-4b7b-990b-e20a714d9dc2" name="Changes" comment="" />
+      <created>1792373978449</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1792507520942</updated>
+      <updated>1792373978449</updated>
     </task>
-    <task id="LOCAL-00001" summary="Update menu alignment">
-      <option name="closed" value="true" />
-      <created>1792618072498</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1792618072498</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Update menu alignment">
-      <option name="closed" value="true" />
-      <created>1792630166709</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1792630166709</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Notes in Game, Rental and Customer">
-      <option name="closed" value="true" />
-      <created>1792633177286</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1792633177286</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Added controllers, FXMl screens. Created MainScreen and Login screen. All based off BankSystem App.">
-      <option name="closed" value="true" />
-      <created>1793932995339</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1793932995339</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Updated DeleteCustomersController, added to .txt files">
-      <option name="closed" value="true" />
-      <created>1794335746863</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1794335746863</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Updated ListCustomersScreen">
-      <option name="closed" value="true" />
-      <created>1794414037477</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1794414037477</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Updated ListGamesScreen">
-      <option name="closed" value="true" />
-      <created>1794414348285</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1794414348285</updated>
-    </task>
-    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="&quot;Finalize prototype milestone CRUD and file I/O persistence&quot;" />
-    <MESSAGE value="Finalize prototype milestone CRUD and file I/O persistence" />
-    <MESSAGE value="Update menu alignment" />
-    <MESSAGE value="Notes in Game, Rental and Customer" />
-    <MESSAGE value="Added controllers, FXMl screens. Created MainScreen and Login screen. All based off BankSystem App." />
-    <MESSAGE value="Updated DeleteCustomersController, added to .txt files" />
-    <MESSAGE value="Updated ListCustomersScreen" />
-    <MESSAGE value="Updated ListGamesScreen" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated ListGamesScreen" />
+    <MESSAGE value="Made Abstract Class person, made customer and staff extend person" />
+    <MESSAGE value="changed from .txt to csv" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed from .txt to csv" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/main/java/edu/utsa/cs3443/tabletopvault/group6/model/Customer.java</url>
+          <line>10</line>
+          <properties field="customerNotes" class="edu.utsa.cs3443.tabletopvault.group6.model.Customer" />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

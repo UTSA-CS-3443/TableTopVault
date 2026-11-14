@@ -58,7 +58,7 @@ public class CheckoutGameController {
     }
 
     /**
-     * Processes the board game checkout and updates both data/games.txt and data/rentals.txt.
+     * Processes the board game checkout and updates both data/games.csv and data/rentals.csv.
      *
      * @param event Complete Checkout button click event
      */

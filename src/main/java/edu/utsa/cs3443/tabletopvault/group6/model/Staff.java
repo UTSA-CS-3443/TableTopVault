@@ -90,7 +90,7 @@ public class Staff extends Person {
 
 
     public static Staff login(String username, String password) throws FileNotFoundException {
-        File file = new File("data/staff.txt");
+        File file = new File("data/staff.csv");
 
         try(Scanner scanner = new Scanner(file)) {
             while (scanner.hasNextLine()) {

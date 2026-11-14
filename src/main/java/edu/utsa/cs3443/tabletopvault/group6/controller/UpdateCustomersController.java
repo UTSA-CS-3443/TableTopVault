@@ -67,7 +67,7 @@ public class UpdateCustomersController {
     }
 
     /**
-     * Updates the customer's contact details and writes the changes to data/customers.txt.
+     * Updates the customer's contact details and writes the changes to data/customers.csv.
      *
      * @param event Save Changes button click event
      */

@@ -72,7 +72,7 @@ public class UpdateGamesController {
     }
 
     /**
-     * Applies form modifications to the loaded Game and writes the updated inventory to data/games.txt.
+     * Applies form modifications to the loaded Game and writes the updated inventory to data/games.csv.
      *
      * @param event Update Game button click event
      */

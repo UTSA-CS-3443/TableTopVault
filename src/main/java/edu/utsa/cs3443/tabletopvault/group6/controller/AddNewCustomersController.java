@@ -14,7 +14,7 @@ import java.io.FileNotFoundException;
 
 /**
  * Controller for add-new-customers-screen.fxml.
- * Validates patron registration details and saves new Customer records to data/customers.txt.
+ * Validates patron registration details and saves new Customer records to data/customers.csv.
  */
 public class AddNewCustomersController {
 
@@ -62,7 +62,7 @@ public class AddNewCustomersController {
     }
 
     /**
-     * Validates form inputs, creates a new Customer, and persists to data/customers.txt.
+     * Validates form inputs, creates a new Customer, and persists to data/customers.csv.
      *
      * @param event Add Customer button click event
      */

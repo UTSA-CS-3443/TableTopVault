@@ -64,11 +64,11 @@ public class GameRentalManager {
     }
 
     /**
-     * Reads game records from data/games.txt into the in-memory games list.
+     * Reads game records from data/games.csv into the in-memory games list.
      */
     public void loadGames() {
         games.clear();
-        try (BufferedReader br = new BufferedReader(new FileReader("data/games.txt"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader("data/games.csv"))) {
             String line;
             while ((line = br.readLine()) != null) {
                 if (line.isBlank()) continue;
@@ -84,18 +84,18 @@ public class GameRentalManager {
                 }
             }
         } catch (IOException e) {
-            System.out.println("Note: Could not load data/games.txt or file is empty.");
+            System.out.println("Note: Could not load data/games.csv or file is empty.");
         }
     }
 
     public ArrayList<Game> getGamesList() {return games;}
 
     /**
-     * Reads customer records from data/customers.txt into the in-memory customers list.
+     * Reads customer records from data/customers.csv into the in-memory customers list.
      */
     public void loadCustomers() {
         customers.clear();
-        try (BufferedReader br = new BufferedReader(new FileReader("data/customers.txt"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader("data/customers.csv"))) {
             String line;
             while ((line = br.readLine()) != null) {
                 if (line.isBlank()) continue;
@@ -110,7 +110,7 @@ public class GameRentalManager {
                 }
             }
         } catch (IOException e) {
-            System.out.println("Note: Could not load data/customers.txt or file is empty.");
+            System.out.println("Note: Could not load data/customers.csv or file is empty.");
         }
     }
 
@@ -123,11 +123,11 @@ public class GameRentalManager {
 
 
     /**
-     * Reads rental records from data/rentals.txt and links them to existing Game and Customer objects.
+     * Reads rental records from data/rentals.csv and links them to existing Game and Customer objects.
      */
     public void loadRentals() {
         rentals.clear();
-        try (BufferedReader br = new BufferedReader(new FileReader("data/rentals.txt"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader("data/rentals.csv"))) {
             String line;
             while ((line = br.readLine()) != null) {
                 if (line.isBlank()) continue;
@@ -150,16 +150,16 @@ public class GameRentalManager {
                 }
             }
         } catch (IOException e) {
-            System.out.println("Note: Could not load data/rentals.txt or file is empty.");
+            System.out.println("Note: Could not load data/rentals.csv or file is empty.");
         }
     }
 
     /**
-     * Reads staff records from data/staff.txt into the in-memory staffList.
+     * Reads staff records from data/staff.csv into the in-memory staffList.
      */
     public void loadStaff() {
         staffList.clear();
-        try (BufferedReader br = new BufferedReader(new FileReader("data/staff.txt"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader("data/staff.csv"))) {
             String line;
             while ((line = br.readLine()) != null) {
                 if (line.isBlank()) continue;
@@ -174,7 +174,7 @@ public class GameRentalManager {
                 }
             }
         } catch (IOException e) {
-            System.out.println("Note: Could not load data/staff.txt or file is empty.");
+            System.out.println("Note: Could not load data/staff.csv or file is empty.");
         }
     }
 
@@ -233,7 +233,7 @@ public class GameRentalManager {
     // ==================== GAME CRUD & PERSISTENCE ====================
 
     /**
-     * Adds a new game to the inventory and immediately persists to data/games.txt.
+     * Adds a new game to the inventory and immediately persists to data/games.csv.
      *
      * @param newGame the Game object to add
      */
@@ -243,7 +243,7 @@ public class GameRentalManager {
     }
 
     /**
-     * Removes a game by title and updates data/games.txt.
+     * Removes a game by title and updates data/games.csv.
      *
      * @param title title of the game to remove
      * @return true if removed, false if not found
@@ -257,7 +257,7 @@ public class GameRentalManager {
     }
 
     /**
-     * Updates a game's availability and optional notes, then saves to data/games.txt.
+     * Updates a game's availability and optional notes, then saves to data/games.csv.
      *
      * @param title     title of the game to update
      * @param available updated availability status
@@ -279,10 +279,10 @@ public class GameRentalManager {
     }
 
     /**
-     * Writes all current games in memory to data/games.txt.
+     * Writes all current games in memory to data/games.csv.
      */
     public void saveGames() {
-        try (PrintWriter writer = new PrintWriter(new FileWriter("data/games.txt"))) {
+        try (PrintWriter writer = new PrintWriter(new FileWriter("data/games.csv"))) {
             for (Game g : games) {
                 writer.println(g.getGameTitle() + "," + g.getMinPlayers() + ","
                         + g.getMaxPlayers() + "," + g.getCategory() + ","
@@ -296,7 +296,7 @@ public class GameRentalManager {
     // ==================== CUSTOMER CRUD & PERSISTENCE ====================
 
     /**
-     * Adds a new customer and immediately persists to data/customers.txt.
+     * Adds a new customer and immediately persists to data/customers.csv.
      *
      * @param newCustomer the Customer object to add
      */
@@ -306,7 +306,7 @@ public class GameRentalManager {
     }
 
     /**
-     * Removes a customer by full name and updates data/customers.txt.
+     * Removes a customer by full name and updates data/customers.csv.
      *
      * @param fullName full name of the customer to remove
      * @return true if removed, false if not found
@@ -320,7 +320,7 @@ public class GameRentalManager {
     }
 
     /**
-     * Updates an existing customer's contact fields and saves to data/customers.txt.
+     * Updates an existing customer's contact fields and saves to data/customers.csv.
      *
      * @param fullName    full name of the customer to update
      * @param email       new email (kept unchanged if blank)
@@ -344,10 +344,10 @@ public class GameRentalManager {
     }
 
     /**
-     * Writes all current customers in memory to data/customers.txt.
+     * Writes all current customers in memory to data/customers.csv.
      */
     public void saveCustomers() {
-        try (PrintWriter writer = new PrintWriter(new FileWriter("data/customers.txt"))) {
+        try (PrintWriter writer = new PrintWriter(new FileWriter("data/customers.csv"))) {
             for (Customer c : customers) {
                 writer.println(c.getFullName() + "," + c.getEmail() + ","
                         + c.getPhoneNumber() + "," + c.getPreferredContact() + ","
@@ -388,7 +388,7 @@ public class GameRentalManager {
     }
 
     /**
-     * Processes a game return for an active rental and updates both rentals.txt and games.txt.
+     * Processes a game return for an active rental and updates both rentals.csv and games.csv.
      *
      * @param gameTitle    title of the game being returned
      * @param customerName full name of the customer returning the game
@@ -409,10 +409,10 @@ public class GameRentalManager {
     }
 
     /**
-     * Writes all rental records in memory to data/rentals.txt.
+     * Writes all rental records in memory to data/rentals.csv.
      */
     public void saveRentals() {
-        try (PrintWriter writer = new PrintWriter(new FileWriter("data/rentals.txt"))) {
+        try (PrintWriter writer = new PrintWriter(new FileWriter("data/rentals.csv"))) {
             for (Rental r : rentals) {
                 writer.println(r.toCsvString());
             }

@@ -12,7 +12,7 @@ import java.io.FileNotFoundException;
 
 /**
  * Controller for add-new-games-screen.fxml.
- * Validates staff input and adds a new board game to the inventory and data/games.txt.
+ * Validates staff input and adds a new board game to the inventory and data/games.csv.
  */
 public class AddNewGamesController {
 
@@ -47,7 +47,7 @@ public class AddNewGamesController {
     }
 
     /**
-     * Validates form fields, creates a new Game object, and persists it to data/games.txt.
+     * Validates form fields, creates a new Game object, and persists it to data/games.csv.
      *
      * @param event Save Game button click event
      */

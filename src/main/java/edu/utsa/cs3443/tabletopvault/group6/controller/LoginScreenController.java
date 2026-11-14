@@ -59,7 +59,7 @@ public class LoginScreenController {
     }
 
     /**
-     * Validates staff credentials against data/staff.txt when the Staff Login button is clicked.
+     * Validates staff credentials against data/staff.csv when the Staff Login button is clicked.
      *
      * @param event button click action event
      */
@@ -77,7 +77,7 @@ public class LoginScreenController {
         try {
             staff = Staff.login(username, password);
         } catch (FileNotFoundException e) {
-            loginIndicatorLabel.setText("Unable to read staff.txt");
+            loginIndicatorLabel.setText("Unable to read staff.csv");
             return;
         }
 
