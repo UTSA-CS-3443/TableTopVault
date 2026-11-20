@@ -8,22 +8,31 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox spacing="15.0" prefHeight="320.0" prefWidth="480.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.utsa.cs3443.tabletopvault.group6.controller.FindGamesController">
+<VBox prefHeight="320.0" prefWidth="480.0" spacing="15.0" style="-fx-background-color: #243e5b;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.utsa.cs3443.tabletopvault.group6.controller.FindGamesController">
     <padding>
         <Insets bottom="20.0" left="25.0" right="25.0" top="20.0" />
     </padding>
     <children>
-        <Label text="Find a Board Game">
+        <Label text="Find a Board Game" textFill="#fffdfd">
             <font>
-                <Font name="Georgia" size="22.0" />
+                <Font name="Georgia Bold" size="22.0" />
             </font>
         </Label>
         <HBox spacing="10.0">
             <children>
-                <TextField fx:id="gameNameTextField" prefWidth="300.0" promptText="Enter game title (e.g., Catan)" />
-                <Button mnemonicParsing="false" onAction="#onFindButtonClicked" text="Search" />
+                <TextField fx:id="gameNameTextField" prefWidth="300.0" promptText="Enter game title (e.g., Catan)">
+               <font>
+                  <Font name="Verdana" size="12.0" />
+               </font></TextField>
+                <Button mnemonicParsing="false" onAction="#onFindButtonClicked" style="-fx-background-color: #f5a802;" text="Search">
+               <font>
+                  <Font name="Verdana Bold" size="12.0" />
+               </font></Button>
             </children>
         </HBox>
-        <Label fx:id="searchResultLabel" wrapText="true" prefHeight="160.0" prefWidth="420.0" />
+        <Label fx:id="searchResultLabel" prefHeight="160.0" prefWidth="420.0" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font></Label>
     </children>
 </VBox>

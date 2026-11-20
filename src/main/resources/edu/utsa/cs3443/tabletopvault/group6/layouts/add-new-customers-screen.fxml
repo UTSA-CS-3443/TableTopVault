@@ -10,24 +10,42 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="420.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.utsa.cs3443.tabletopvault.group6.controller.AddNewCustomersController">
+<AnchorPane prefHeight="420.0" prefWidth="600.0" style="-fx-background-color: #243e5b;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.utsa.cs3443.tabletopvault.group6.controller.AddNewCustomersController">
    <children>
-      <Label layoutX="22.0" layoutY="14.0" prefHeight="39.0" prefWidth="250.0" text="New Customer">
+      <Label layoutX="22.0" layoutY="14.0" prefHeight="39.0" prefWidth="250.0" text="New Customer" textFill="WHITE">
          <font>
-            <Font name="Georgia" size="25.0" />
+            <Font name="Georgia Bold" size="25.0" />
          </font>
       </Label>
-      <Label layoutX="21.0" layoutY="70.0" text="Full Name" />
-      <TextField fx:id="fullNameTextField" layoutX="21.0" layoutY="90.0" prefHeight="26.0" prefWidth="297.0" />
-      <Label layoutX="21.0" layoutY="125.0" text="Email" />
-      <TextField fx:id="emailTextField" layoutX="21.0" layoutY="145.0" prefWidth="150.0" />
-      <Label layoutX="184.0" layoutY="125.0" text="Phone Number" />
-      <TextField fx:id="phoneNumberTextField" layoutX="184.0" layoutY="145.0" prefWidth="135.0" />
-      <MenuButton layoutX="21.0" layoutY="190.0" mnemonicParsing="false" text="Preferred Contact">
+      <Label layoutX="21.0" layoutY="70.0" text="Full Name" textFill="WHITE">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font></Label>
+      <TextField fx:id="fullNameTextField" layoutX="21.0" layoutY="90.0" prefHeight="26.0" prefWidth="297.0">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font></TextField>
+      <Label layoutX="21.0" layoutY="125.0" text="Email" textFill="WHITE">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font></Label>
+      <TextField fx:id="emailTextField" layoutX="21.0" layoutY="145.0" prefWidth="150.0">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font></TextField>
+      <Label layoutX="184.0" layoutY="125.0" text="Phone Number" textFill="WHITE">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font></Label>
+      <TextField fx:id="phoneNumberTextField" layoutX="184.0" layoutY="145.0" prefWidth="135.0">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font></TextField>
+      <MenuButton layoutX="21.0" layoutY="190.0" mnemonicParsing="false" style="-fx-background-color: #f5a802;" text="Preferred Contact">
         <items>
           <MenuItem mnemonicParsing="false">
                <graphic>
-                  <CheckBox fx:id="emailCheckBox" selected="true" mnemonicParsing="false" text="Email" />
+                  <CheckBox fx:id="emailCheckBox" mnemonicParsing="false" selected="true" text="Email" />
                </graphic>
             </MenuItem>
           <MenuItem mnemonicParsing="false">
@@ -36,12 +54,33 @@
                </graphic>
             </MenuItem>
         </items>
+         <font>
+            <Font name="Verdana Bold" size="12.0" />
+         </font>
       </MenuButton>
-      <Label layoutX="21.0" layoutY="235.0" text="Customer Notes" />
-      <TextArea fx:id="customerNotesTextArea" layoutX="21.0" layoutY="255.0" prefHeight="105.0" prefWidth="300.0" />
-      <Label layoutX="355.0" layoutY="125.0" text="Games Checked Out" />
-      <TextArea fx:id="gamesCheckedoutTextArea" layoutX="355.0" layoutY="145.0" prefHeight="168.0" prefWidth="220.0" />
-      <Button fx:id="onAddCustomerClicked" layoutX="420.0" layoutY="335.0" mnemonicParsing="false" onAction="#handleAddCustomer" text="Add Customer" />
-      <Label fx:id="statusLabel" layoutX="21.0" layoutY="375.0" prefWidth="550.0" textFill="#1b5e20" />
+      <Label layoutX="21.0" layoutY="235.0" text="Customer Notes" textFill="#fdfafa">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font></Label>
+      <TextArea fx:id="customerNotesTextArea" layoutX="21.0" layoutY="255.0" prefHeight="105.0" prefWidth="300.0">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font></TextArea>
+      <Label layoutX="355.0" layoutY="125.0" text="Games Checked Out" textFill="WHITE">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font></Label>
+      <TextArea fx:id="gamesCheckedoutTextArea" layoutX="355.0" layoutY="145.0" prefHeight="168.0" prefWidth="220.0">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font></TextArea>
+      <Button fx:id="onAddCustomerClicked" layoutX="420.0" layoutY="335.0" mnemonicParsing="false" onAction="#handleAddCustomer" style="-fx-background-color: #f5a802;" text="Add Customer">
+         <font>
+            <Font name="Verdana Bold" size="12.0" />
+         </font></Button>
+      <Label fx:id="statusLabel" layoutX="21.0" layoutY="375.0" prefWidth="550.0" textFill="WHITE">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font></Label>
    </children>
 </AnchorPane>

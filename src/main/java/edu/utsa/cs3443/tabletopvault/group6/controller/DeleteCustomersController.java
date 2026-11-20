@@ -56,7 +56,10 @@ public class DeleteCustomersController {
             private final HBox hbox = new HBox(10, label, myButton);
 
             {
+                myButton.setStyle("-fx-background-color:  #f5a802;" + "-fx-text-fill: black;" + "-fx-font-weight: bold;" + "-fx-background-radius: 5;");
+
                 myButton.setOnAction(e -> {
+
                     Customer customer = getItem();
                     if (customer != null) {
                         boolean removed = gameRentalManager.removeCustomer(customer.getFullName());

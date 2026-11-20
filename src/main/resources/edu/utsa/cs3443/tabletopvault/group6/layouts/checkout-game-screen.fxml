@@ -7,21 +7,33 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox spacing="14.0" prefHeight="320.0" prefWidth="460.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.utsa.cs3443.tabletopvault.group6.controller.CheckoutGameController">
+<VBox prefHeight="320.0" prefWidth="460.0" spacing="14.0" style="-fx-background-color: #243e5b;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.utsa.cs3443.tabletopvault.group6.controller.CheckoutGameController">
     <padding>
         <Insets bottom="20.0" left="25.0" right="25.0" top="20.0" />
     </padding>
     <children>
-        <Label text="Checkout Board Game">
+        <Label text="Checkout Board Game" textFill="WHITE">
             <font>
-                <Font name="Georgia" size="22.0" />
+                <Font name="Georgia Bold" size="22.0" />
             </font>
         </Label>
-        <Label text="Select Available Game:" />
-        <ComboBox fx:id="availableGamesComboBox" prefWidth="380.0" promptText="Choose a game..." />
-        <Label text="Select Registered Customer:" />
-        <ComboBox fx:id="customersComboBox" prefWidth="380.0" promptText="Choose a patron..." />
-        <Button mnemonicParsing="false" onAction="#onCheckoutButtonClicked" text="Complete Checkout" />
-        <Label fx:id="checkoutStatusLabel" wrapText="true" textFill="#1b5e20" />
+        <Label text="Select Available Game:" textFill="WHITE">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font></Label>
+        <ComboBox fx:id="availableGamesComboBox" prefWidth="380.0" promptText="Choose a game..." style="-fx-background-color: #f5a802;" />
+        <Label text="Select Registered Customer:" textFill="WHITE">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font></Label>
+        <ComboBox fx:id="customersComboBox" prefWidth="380.0" promptText="Choose a patron..." style="-fx-background-color: #f5a802;" />
+        <Button mnemonicParsing="false" onAction="#onCheckoutButtonClicked" style="-fx-background-color: #f5a802;" text="Complete Checkout">
+         <font>
+            <Font name="Verdana Bold" size="12.0" />
+         </font></Button>
+        <Label fx:id="checkoutStatusLabel" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font></Label>
     </children>
 </VBox>

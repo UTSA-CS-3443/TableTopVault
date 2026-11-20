@@ -1,6 +1,6 @@
 Scattergories,2,6,Party,false,Instruction book is sticky
 Scabble,2,4,Party,true,No comment
-Battleship,2,2,Strategy,true,No comment
+Battleship,2,2,Strategy,false,No comment
 Ticket to Ride,2,5,Strategy,true,No comment
 Carcassonne,2,5,Strategy,true,No comment
 Pandemic,2,4,Cooperative,true,Missing one player reference card
@@ -8,9 +8,6 @@ Clue,2,6,Mystery,true,No comment
 Monopoly,2,8,Family,true,Box has minor damage
 Risk,2,6,Strategy,true,No comment
 Uno,2,10,Card,true,No comment
-Exploding Kittens,2,5,Card,true,No comment
-Azul,2,4,Abstract,true,No comment
-Wingspan,1,5,Strategy,true,No comment
 Dixit,3,6,Party,true,No comment
 Forbidden Island,2,4,Cooperative,true,No comment
 Betrayal at House on the Hill,3,6,Horror,true,No comment
@@ -25,5 +22,4 @@ Goblin Market,2,5,Fantasy,true,No comment
 Shadowvale Chronicles,2,6,Adventure,true,No comment
 Crystal Caverns,1,4,Cooperative,true,No comment
 Clockwork Kingdom,2,4,Strategy,true,No comment
-Pirates of Ember Bay,2,6,Adventure,true,No comment
 Catan,3,6,Strategy,false,No comment

@@ -1,25 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.utsa.cs3443.tabletopvault.group6.controller.ListGamesController">
+<AnchorPane prefHeight="400.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.utsa.cs3443.tabletopvault.group6.controller.ListGamesController">
 
    <children>
       <TableView fx:id="gamesTableView" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
 
          <columns>
-            <TableColumn fx:id="titleColumn" prefWidth="142.00006103515625" text="Game Title" />
+            <TableColumn fx:id="titleColumn" prefWidth="142.00006103515625" style="-fx-background-color: #ffffff;" text="Game Title" />
 
-            <TableColumn fx:id="minPlayersColumn" prefWidth="88.6666259765625" text="Min Players" />
+            <TableColumn fx:id="minPlayersColumn" prefWidth="88.6666259765625" style="-fx-background-color: #ffffff;" text="Min Players" />
 
-            <TableColumn fx:id="maxPlayersColumn" prefWidth="78.6666259765625" text="Max Players" />
+            <TableColumn fx:id="maxPlayersColumn" prefWidth="78.6666259765625" style="-fx-background-color: #ffffff;" text="Max Players" />
 
-            <TableColumn fx:id="categoryColumn" minWidth="0.0" prefWidth="78.0" text="Category" />
+            <TableColumn fx:id="categoryColumn" minWidth="0.0" prefWidth="78.0" style="-fx-background-color: #ffffff;" text="Category" />
 
-            <TableColumn fx:id="availableColumn" prefWidth="77.333251953125" text="Available" />
+            <TableColumn fx:id="availableColumn" prefWidth="77.333251953125" style="-fx-background-color: #ffffff;" text="Available" />
 
-            <TableColumn fx:id="notesColumn" prefWidth="282.79998779296875" text="Notes" />
+            <TableColumn fx:id="notesColumn" prefWidth="282.79998779296875" style="-fx-background-color: #ffffff;" text="Notes" />
          </columns>
 
       </TableView>

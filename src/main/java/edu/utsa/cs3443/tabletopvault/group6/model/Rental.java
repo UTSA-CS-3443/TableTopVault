@@ -38,7 +38,7 @@ public class Rental {
      * @param customer full name
      * @param checkoutDate date checked out
      * @param returnDate date returned
-     * @param returned confimation returned
+     * @param returned confirmation returned
      */
 
     public Rental(Game game, Customer customer, LocalDate checkoutDate, LocalDate returnDate, boolean returned) {

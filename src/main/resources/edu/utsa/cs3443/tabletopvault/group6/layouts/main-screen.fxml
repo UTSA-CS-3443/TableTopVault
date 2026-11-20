@@ -5,28 +5,36 @@
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="450.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.utsa.cs3443.tabletopvault.group6.controller.MainScreenController">
+<AnchorPane prefHeight="450.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.utsa.cs3443.tabletopvault.group6.controller.MainScreenController">
     <children>
         <BorderPane fx:id="mainBorderPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <top>
                 <HBox>
                     <children>
-                        <ToolBar maxWidth="1.7976931348623157E308" prefHeight="90.0" prefWidth="750.0" HBox.hgrow="ALWAYS">
+                        <ToolBar maxWidth="1.7976931348623157E308" prefHeight="105.0" prefWidth="750.0" style="-fx-background-color: #243e5b;" HBox.hgrow="ALWAYS">
                             <items>
-                                <Label prefHeight="35.0" prefWidth="310.0" text="TableTop Vault">
+                                <ImageView fitHeight="72.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@images/Classic Board Game Icons (1).png" />
+                                    </image>
+                                </ImageView>
+
+                                <Label prefHeight="35.0" prefWidth="259.0" text="TableTop Vault" textFill="WHITE">
                                     <padding>
-                                        <Insets left="10.0" right="10.0" />
+                                        <Insets right="10.0" />
                                     </padding>
                                     <font>
-                                        <Font name="Georgia" size="30.0" />
+                                        <Font name="Georgia Bold" size="30.0" />
                                     </font>
                                 </Label>
-                                <MenuButton mnemonicParsing="false" text="The Shelf">
+                                <MenuButton mnemonicParsing="false" style="-fx-background-color: #f5a802;" text="The Shelf">
                                     <items>
                                         <MenuItem onAction="#onFindGamesMenuItemClick" text="Find Games" />
                                         <MenuItem onAction="#onListGamesMenuItemClick" text="List Games" />
@@ -34,8 +42,11 @@
                                         <MenuItem onAction="#onUpdateGamesMenuItemClick" text="Update Games" />
                                         <MenuItem onAction="#onDeleteGamesMenuItemClick" text="Delete Games" />
                                     </items>
+                           <font>
+                              <Font name="Verdana Bold" size="12.0" />
+                           </font>
                                 </MenuButton>
-                                <MenuButton mnemonicParsing="false" text="Customers">
+                                <MenuButton mnemonicParsing="false" style="-fx-background-color: #f5a802;" text="Customers">
                                     <items>
                                         <MenuItem onAction="#onFindCustomersMenuItemClick" text="Find Customer" />
                                         <MenuItem onAction="#onListCustomersMenuItemClick" text="List Customers" />
@@ -43,17 +54,26 @@
                                         <MenuItem onAction="#onUpdateCustomersMenuItemClick" text="Update Customer" />
                                         <MenuItem onAction="#onDeleteCustomersMenuItemClick" text="Delete Customers" />
                                     </items>
+                           <font>
+                              <Font name="Verdana Bold" size="12.0" />
+                           </font>
                                 </MenuButton>
-                                <MenuButton mnemonicParsing="false" text="Checkout/In">
+                                <MenuButton mnemonicParsing="false" style="-fx-background-color: #f5a802;" text="Checkout/In">
                                     <items>
                                         <MenuItem onAction="#onCheckoutGameMenuItemClick" text="Checkout Game" />
                                         <MenuItem onAction="#onCheckinGameMenuItemClick" text="Checkin Game" />
                                     </items>
+                           <font>
+                              <Font name="Verdana Bold" size="12.0" />
+                           </font>
                                 </MenuButton>
-                                <MenuButton fx:id="logoutMenu" mnemonicParsing="false" text="Staff">
+                                <MenuButton fx:id="logoutMenu" mnemonicParsing="false" style="-fx-background-color: #f5a802;" text="Staff">
                                     <items>
                                         <MenuItem onAction="#onLogoutMenuButtonClick" text="Logout" />
                                     </items>
+                           <font>
+                              <Font name="Verdana Bold" size="12.0" />
+                           </font>
                                 </MenuButton>
                             </items>
                         </ToolBar>

@@ -20,8 +20,7 @@ public class TableTopVaultApplication extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         FXMLLoader fxmlLoader = new FXMLLoader(
-                TableTopVaultApplication.class.getResource("/edu/utsa/cs3443/tabletopvault/group6/layouts/login-screen.fxml")
-        );
+                TableTopVaultApplication.class.getResource("/edu/utsa/cs3443/tabletopvault/group6/layouts/login-screen.fxml"));
 
         Scene scene = new Scene(fxmlLoader.load());
 
