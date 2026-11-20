@@ -12,26 +12,26 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="450.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.utsa.cs3443.tabletopvault.group6.controller.MainScreenController">
+<AnchorPane prefHeight="450.0" prefWidth="815.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.utsa.cs3443.tabletopvault.group6.controller.MainScreenController">
     <children>
         <BorderPane fx:id="mainBorderPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <top>
-                <HBox>
+                <HBox prefHeight="105.0" prefWidth="779.0">
                     <children>
-                        <ToolBar maxWidth="1.7976931348623157E308" prefHeight="105.0" prefWidth="750.0" style="-fx-background-color: #243e5b;" HBox.hgrow="ALWAYS">
+                        <ToolBar maxWidth="1.7976931348623157E308" prefHeight="105.0" prefWidth="773.0" style="-fx-background-color: #243e5b;" HBox.hgrow="ALWAYS">
                             <items>
-                                <ImageView fitHeight="72.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                                <ImageView fitHeight="54.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
                                         <Image url="@images/Classic Board Game Icons (1).png" />
                                     </image>
                                 </ImageView>
 
-                                <Label prefHeight="35.0" prefWidth="259.0" text="TableTop Vault" textFill="WHITE">
+                                <Label prefHeight="35.0" prefWidth="244.0" text="TableTop Vault" textFill="WHITE">
                                     <padding>
                                         <Insets right="10.0" />
                                     </padding>
                                     <font>
-                                        <Font name="Georgia Bold" size="30.0" />
+                                        <Font name="Georgia Bold" size="29.0" />
                                     </font>
                                 </Label>
                                 <MenuButton mnemonicParsing="false" style="-fx-background-color: #f5a802;" text="The Shelf">
@@ -81,7 +81,7 @@
                 </HBox>
             </top>
             <center>
-                <AnchorPane />
+                <AnchorPane prefHeight="345.0" prefWidth="797.0" />
             </center>
         </BorderPane>
     </children>

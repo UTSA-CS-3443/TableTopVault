@@ -16,7 +16,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.utsa.cs3443.tabletopvault.group6.controller.LoginScreenController">
+<AnchorPane prefHeight="450.0" prefWidth="815.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.utsa.cs3443.tabletopvault.group6.controller.LoginScreenController">
 
    <children>
       <BorderPane fx:id="loginBorderPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -29,7 +29,7 @@
                         <Image url="@images/Classic Board Game Icons (1).png" />
                      </image>
                   </ImageView>
-                  <HBox prefHeight="101.0" prefWidth="392.0">
+                  <HBox prefHeight="101.0" prefWidth="467.0">
                      <children>
                         <VBox prefHeight="101.0" prefWidth="334.0">
                            <children>

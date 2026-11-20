@@ -4,30 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="34378838-7ebd-4b7b-990b-e20a714d9dc2" name="Changes" comment="changed from .txt to csv">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/edu/utsa/cs3443/tabletopvault/group6/layouts/images/Classic Board Game Icons (1).png" afterDir="false" />
+    <list default="true" id="34378838-7ebd-4b7b-990b-e20a714d9dc2" name="Changes" comment="Added Colors/fonts">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/customers.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/customers.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/games.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/games.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/rentals.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/rentals.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/utsa/cs3443/tabletopvault/group6/controller/DeleteCustomersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/utsa/cs3443/tabletopvault/group6/controller/DeleteCustomersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/utsa/cs3443/tabletopvault/group6/controller/DeleteGamesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/utsa/cs3443/tabletopvault/group6/controller/DeleteGamesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/utsa/cs3443/tabletopvault/group6/controller/TableTopVaultApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/utsa/cs3443/tabletopvault/group6/controller/TableTopVaultApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/utsa/cs3443/tabletopvault/group6/model/Rental.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/utsa/cs3443/tabletopvault/group6/model/Rental.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/edu/utsa/cs3443/tabletopvault/group6/layouts/add-new-customers-screen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/edu/utsa/cs3443/tabletopvault/group6/layouts/add-new-customers-screen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/edu/utsa/cs3443/tabletopvault/group6/layouts/add-new-games-screen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/edu/utsa/cs3443/tabletopvault/group6/layouts/add-new-games-screen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/edu/utsa/cs3443/tabletopvault/group6/layouts/checkin-game-screen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/edu/utsa/cs3443/tabletopvault/group6/layouts/checkin-game-screen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/edu/utsa/cs3443/tabletopvault/group6/layouts/checkout-game-screen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/edu/utsa/cs3443/tabletopvault/group6/layouts/checkout-game-screen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/edu/utsa/cs3443/tabletopvault/group6/layouts/delete-customers-screen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/edu/utsa/cs3443/tabletopvault/group6/layouts/delete-customers-screen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/edu/utsa/cs3443/tabletopvault/group6/layouts/delete-games-screen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/edu/utsa/cs3443/tabletopvault/group6/layouts/delete-games-screen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/edu/utsa/cs3443/tabletopvault/group6/layouts/find-customers-screen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/edu/utsa/cs3443/tabletopvault/group6/layouts/find-customers-screen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/edu/utsa/cs3443/tabletopvault/group6/layouts/find-games-screen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/edu/utsa/cs3443/tabletopvault/group6/layouts/find-games-screen.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/edu/utsa/cs3443/tabletopvault/group6/layouts/list-customers-screen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/edu/utsa/cs3443/tabletopvault/group6/layouts/list-customers-screen.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/edu/utsa/cs3443/tabletopvault/group6/layouts/list-games-screen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/edu/utsa/cs3443/tabletopvault/group6/layouts/list-games-screen.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/edu/utsa/cs3443/tabletopvault/group6/layouts/login-screen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/edu/utsa/cs3443/tabletopvault/group6/layouts/login-screen.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/edu/utsa/cs3443/tabletopvault/group6/layouts/main-screen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/edu/utsa/cs3443/tabletopvault/group6/layouts/main-screen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/edu/utsa/cs3443/tabletopvault/group6/layouts/update-customers-screen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/edu/utsa/cs3443/tabletopvault/group6/layouts/update-customers-screen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/edu/utsa/cs3443/tabletopvault/group6/layouts/update-games-screen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/edu/utsa/cs3443/tabletopvault/group6/layouts/update-games-screen.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,6 +181,15 @@
       <option name="presentableId" value="Default" />
       <updated>1792373978449</updated>
     </task>
+    <task id="LOCAL-00001" summary="Added Colors/fonts">
+      <option name="closed" value="true" />
+      <created>1795212398838</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1795212398838</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,7 +209,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Made Abstract Class person, made customer and staff extend person" />
     <MESSAGE value="changed from .txt to csv" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed from .txt to csv" />
+    <MESSAGE value="Added Colors/fonts" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Colors/fonts" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
