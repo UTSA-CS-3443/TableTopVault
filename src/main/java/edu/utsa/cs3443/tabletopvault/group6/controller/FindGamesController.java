@@ -58,4 +58,27 @@ public class FindGamesController {
             searchResultLabel.setText("No game found matching \"" + query + "\".");
         }
     }
+
+    // =========================================================================
+    // COMMENTED-OUT PARTIAL-NAME GAME SEARCH SNIPPET
+    // =========================================================================
+    // @FXML
+    // void onFindPartialGameButtonClicked(javafx.event.ActionEvent event) {
+    //     String query = gameNameTextField.getText().trim();
+    //     if (query.isEmpty()) {
+    //         searchResultLabel.setText("Please enter a game title or keyword.");
+    //         return;
+    //     }
+    //     java.util.List<Game> matches = gameRentalManager.findGamesByPartialTitle(query);
+    //     if (matches.isEmpty()) {
+    //         searchResultLabel.setText("No games found matching \"" + query + "\".");
+    //         return;
+    //     }
+    //     String summary = matches.stream()
+    //             .map(g -> g.getGameTitle() + " (" + g.getCategory() + ", "
+    //                     + (g.isAvailable() ? "Available" : "Checked Out") + ")")
+    //             .collect(java.util.stream.Collectors.joining("\n"));
+    //     searchResultLabel.setText(summary);
+    // }
+
 }

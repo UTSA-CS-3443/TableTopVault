@@ -423,4 +423,71 @@ public class GameRentalManager {
 
 
     /////////////////////////////////////////////////////////////////////////////////
+
+    // =========================================================================
+    // COMMENTED-OUT POST-PEER-REVIEW / INTERVIEW SAFETY SNIPPETS
+    // =========================================================================
+
+    // --- Partial-Name Game Search (case-insensitive substring match) ---
+    // public java.util.List<Game> findGamesByPartialTitle(String query) {
+    //     java.util.List<Game> matches = new ArrayList<>();
+    //     if (query == null || query.isBlank()) {
+    //         return matches;
+    //     }
+    //     String needle = query.trim().toLowerCase();
+    //     for (Game g : games) {
+    //         if (g.getGameTitle() != null && g.getGameTitle().toLowerCase().contains(needle)) {
+    //             matches.add(g);
+    //         }
+    //     }
+    //     return matches;
+    // }
+
+    // --- Customer Lookup by Phone Number (digits-normalized match) ---
+    // public Customer findCustomerByPhoneNumber(String phoneQuery) {
+    //     if (phoneQuery == null || phoneQuery.isBlank()) {
+    //         return null;
+    //     }
+    //     String targetDigits = phoneQuery.replaceAll("\\D", "");
+    //     if (targetDigits.isEmpty()) {
+    //         return null;
+    //     }
+    //     for (Customer c : customers) {
+    //         if (c.getPhoneNumber() != null) {
+    //             String storedDigits = c.getPhoneNumber().replaceAll("\\D", "");
+    //             if (storedDigits.equals(targetDigits)) {
+    //                 return c;
+    //             }
+    //         }
+    //     }
+    //     return null;
+    // }
+
+    // --- Staff Sign-Up Sketch (no extra FXML or controller required) ---
+    // Matches data/staff.csv columns: fullName,email,phoneNumber,username,passwordHash
+    // public boolean registerStaffMember(String fullName, String email, String phoneNumber,
+    //                                    String username, String passwordHash) {
+    //     if (fullName == null || fullName.isBlank()
+    //             || username == null || username.isBlank()
+    //             || passwordHash == null || passwordHash.isBlank()) {
+    //         return false;
+    //     }
+    //     String cleanUsername = username.trim();
+    //     for (Staff s : staffList) {
+    //         if (s.getUsername() != null && s.getUsername().trim().equalsIgnoreCase(cleanUsername)) {
+    //             return false;
+    //         }
+    //     }
+    //     Staff newStaff = new Staff(
+    //             fullName.trim(),
+    //             email == null ? "" : email.trim(),
+    //             phoneNumber == null ? "" : phoneNumber.trim(),
+    //             cleanUsername,
+    //             passwordHash.trim()
+    //     );
+    //     staffList.add(newStaff);
+    //     // Call a staff CSV persistence method here if/when added so data/staff.csv stays synced.
+    //     return true;
+    // }
+
 }

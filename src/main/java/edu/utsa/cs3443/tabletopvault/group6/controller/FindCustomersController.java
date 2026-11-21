@@ -67,4 +67,37 @@ public class FindCustomersController {
             searchResultLabel.setText("No customer found matching \"" + query + "\".");
         }
     }
+
+    // =========================================================================
+    // COMMENTED-OUT CUSTOMER LOOKUP BY PHONE NUMBER SNIPPET
+    // =========================================================================
+    // @FXML
+    // void onFindCustomerByPhoneButtonClicked(javafx.event.ActionEvent event) {
+    //     String query = customerNameTextField.getText().trim();
+    //     if (query.isEmpty()) {
+    //         searchResultLabel.setText("Please enter a customer phone number.");
+    //         return;
+    //     }
+    //     Customer c = gameRentalManager.findCustomerByPhoneNumber(query);
+    //     if (c != null) {
+    //         String activeRentals = gameRentalManager.getRentals().stream()
+    //                 .filter(r -> !r.isReturned() && r.getCustomer().getFullName().equalsIgnoreCase(c.getFullName()))
+    //                 .map(r -> r.getGame().getGameTitle() + " (since " + r.getCheckoutDate() + ")")
+    //                 .collect(java.util.stream.Collectors.joining(", "));
+    //         if (activeRentals.isEmpty()) {
+    //             activeRentals = "None";
+    //         }
+    //         searchResultLabel.setText(
+    //                 "Name: " + c.getFullName() + "\n" +
+    //                 "Email: " + c.getEmail() + "\n" +
+    //                 "Phone: " + c.getPhoneNumber() + "\n" +
+    //                 "Preferred Contact: " + c.getPreferredContact() + "\n" +
+    //                 "Notes: " + c.getCustomerNotes() + "\n" +
+    //                 "Active Rentals: " + activeRentals
+    //         );
+    //     } else {
+    //         searchResultLabel.setText("No customer found with phone \"" + query + "\".");
+    //     }
+    // }
+
 }

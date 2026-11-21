@@ -6,10 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="34378838-7ebd-4b7b-990b-e20a714d9dc2" name="Changes" comment="Added Colors/fonts">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/edu/utsa/cs3443/tabletopvault/group6/layouts/list-customers-screen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/edu/utsa/cs3443/tabletopvault/group6/layouts/list-customers-screen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/edu/utsa/cs3443/tabletopvault/group6/layouts/list-games-screen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/edu/utsa/cs3443/tabletopvault/group6/layouts/list-games-screen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/edu/utsa/cs3443/tabletopvault/group6/layouts/login-screen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/edu/utsa/cs3443/tabletopvault/group6/layouts/login-screen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/edu/utsa/cs3443/tabletopvault/group6/layouts/main-screen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/edu/utsa/cs3443/tabletopvault/group6/layouts/main-screen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,6 +123,9 @@
   &quot;fromUser&quot;: false
 }</component>
   <component name="ProjectId" id="3KtPdIgQNjUIuqyC1369h6GCLqR" />
+  <component name="ProjectLevelVcsManager">
+    <OptionsSetting value="false" id="Update" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
