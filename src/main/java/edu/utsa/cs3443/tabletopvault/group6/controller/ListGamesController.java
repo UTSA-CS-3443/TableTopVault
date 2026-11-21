@@ -7,8 +7,12 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
-import java.util.ArrayList;
+import java.util.List;
 
+/**
+ * Controller for list-games-screen.fxml.
+ * Binds Game model properties to a JavaFX TableView to display the board game catalog.
+ */
 public class ListGamesController {
 
     @FXML
@@ -32,34 +36,32 @@ public class ListGamesController {
     @FXML
     private TableColumn<Game, String> notesColumn;
 
+    /**
+     * Configures table column headers and binds each column to its corresponding Game getter.
+     */
     @FXML
     public void initialize() {
-        if (gamesTableView != null) {
-            gamesTableView.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY_FLEX_LAST_COLUMN);
-        }
-        if (titleColumn != null) {
-            titleColumn.setCellValueFactory(new PropertyValueFactory<>("title"));
-        }
-        if (minPlayersColumn != null) {
-            minPlayersColumn.setCellValueFactory(new PropertyValueFactory<>("minPlayers"));
-        }
-        if (maxPlayersColumn != null) {
-            maxPlayersColumn.setCellValueFactory(new PropertyValueFactory<>("maxPlayers"));
-        }
-        if (categoryColumn != null) {
-            categoryColumn.setCellValueFactory(new PropertyValueFactory<>("category"));
-        }
-        if (availableColumn != null) {
-            availableColumn.setCellValueFactory(new PropertyValueFactory<>("available"));
-        }
-        if (notesColumn != null) {
-            notesColumn.setCellValueFactory(new PropertyValueFactory<>("notes"));
-        }
+        titleColumn.setText("Game Title");
+        minPlayersColumn.setText("Min Players");
+        maxPlayersColumn.setText("Max Players");
+        categoryColumn.setText("Category");
+        availableColumn.setText("Available");
+        notesColumn.setText("Notes");
+
+        titleColumn.setCellValueFactory(new PropertyValueFactory<>("gameTitle"));
+        minPlayersColumn.setCellValueFactory(new PropertyValueFactory<>("minPlayers"));
+        maxPlayersColumn.setCellValueFactory(new PropertyValueFactory<>("maxPlayers"));
+        categoryColumn.setCellValueFactory(new PropertyValueFactory<>("category"));
+        availableColumn.setCellValueFactory(new PropertyValueFactory<>("available"));
+        notesColumn.setCellValueFactory(new PropertyValueFactory<>("gameNotes"));
     }
 
-    public void setGames(ArrayList<Game> games) {
-        if (gamesTableView != null && games != null) {
-            gamesTableView.setItems(FXCollections.observableArrayList(games));
-        }
+    /**
+     * Populates the TableView with an observable list of Game objects.
+     *
+     * @param games list of Game records to display
+     */
+    public void setGames(List<Game> games) {
+        gamesTableView.setItems(FXCollections.observableArrayList(games));
     }
 }
