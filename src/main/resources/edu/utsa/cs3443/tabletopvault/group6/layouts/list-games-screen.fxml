@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="450.0" prefWidth="815.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.utsa.cs3443.tabletopvault.group6.controller.ListGamesController">
+
+   <children>
+      <TableView fx:id="gamesTableView" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+
+         <columns>
+            <TableColumn fx:id="titleColumn" prefWidth="142.00006103515625" text="Game Title" />
+
+            <TableColumn fx:id="minPlayersColumn" prefWidth="88.6666259765625" text="Min Players" />
+
+            <TableColumn fx:id="maxPlayersColumn" prefWidth="78.6666259765625" text="Max Players" />
+
+            <TableColumn fx:id="categoryColumn" minWidth="0.0" prefWidth="78.0" text="Category" />
+
+            <TableColumn fx:id="availableColumn" prefWidth="77.333251953125" text="Available" />
+
+            <TableColumn fx:id="notesColumn" prefWidth="348.3332824707031" text="Notes" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+
+      </TableView>
+   </children>
+</AnchorPane>

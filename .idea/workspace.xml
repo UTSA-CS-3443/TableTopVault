@@ -4,27 +4,50 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1caaed2-6cc3-4484-8521-4ad542217d47" name="Changes" comment="&quot;Finalize prototype milestone CRUD and file I/O persistence&quot;" />
+    <list default="true" id="34378838-7ebd-4b7b-990b-e20a714d9dc2" name="Changes" comment="Added Colors/fonts">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/edu/utsa/cs3443/tabletopvault/group6/layouts/list-customers-screen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/edu/utsa/cs3443/tabletopvault/group6/layouts/list-customers-screen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/edu/utsa/cs3443/tabletopvault/group6/layouts/list-games-screen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/edu/utsa/cs3443/tabletopvault/group6/layouts/list-games-screen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/edu/utsa/cs3443/tabletopvault/group6/layouts/login-screen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/edu/utsa/cs3443/tabletopvault/group6/layouts/login-screen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/edu/utsa/cs3443/tabletopvault/group6/layouts/main-screen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/edu/utsa/cs3443/tabletopvault/group6/layouts/main-screen.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="27" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="INCOMING_COMMITS_CHECK_STRATEGY" value="FETCH" />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "jkh3961"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;obadamusa&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/UTSA-CS-3443/TableTopVault.git",
-    "accountId": "3083bb7d-8d3a-4828-94ff-31925f6b71c7"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/UTSA-CS-3443/TableTopVault.git&quot;,
+    &quot;accountId&quot;: &quot;f08cd68c-3ab7-4c6b-9f9c-2557a8995e0c&quot;
   }
-}]]></component>
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -32,60 +55,165 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0001854095136704" />
+      <entry key="MS500" value="1.282918388621678" />
+      <entry key="S2" value="2.877467477263103" />
+      <entry key="S5" value="4.692970899229391" />
+      <entry key="S10" value="5.969786085432275" />
+      <entry key="S30" value="7.219443995197568" />
+      <entry key="S60" value="7.796375968507182" />
+      <entry key="M2" value="9.731375595960781" />
+      <entry key="M5" value="19.876873857642103" />
+      <entry key="M10" value="32.015178345435835" />
+      <entry key="M15" value="39.465405077234074" />
+      <entry key="M30" value="52.986956739893635" />
+      <entry key="H1" value="66.27841813241979" />
+      <entry key="H2" value="76.59045069134747" />
+      <entry key="H4" value="83.17407520629503" />
+      <entry key="D1" value="89.59815942495112" />
+      <entry key="W1" value="90.79718628383974" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="2.065422059717165E-133" />
+      <entry key="S10" value="4.5446914743656286E-67" />
+      <entry key="S30" value="7.688379319598055E-23" />
+      <entry key="S60" value="8.768340397487923E-12" />
+      <entry key="M2" value="2.961227100709965E-6" />
+      <entry key="M5" value="0.0062633103690925675" />
+      <entry key="M10" value="0.09292162366130376" />
+      <entry key="M15" value="0.25720869853051676" />
+      <entry key="M30" value="0.8102188274584252" />
+      <entry key="H1" value="1.5270629862730427" />
+      <entry key="H2" value="2.129523301032951" />
+      <entry key="H4" value="2.5244112924230406" />
+      <entry key="D1" value="2.914429292431933" />
+      <entry key="W1" value="2.987611082249855" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="0.9661167136530558" />
+      <entry key="MS500" value="1.274588486760399" />
+      <entry key="S2" value="2.8732987408565402" />
+      <entry key="S5" value="4.69006865117723" />
+      <entry key="S10" value="5.967843800055674" />
+      <entry key="S30" value="7.218628011439664" />
+      <entry key="S60" value="7.79590295694599" />
+      <entry key="M2" value="9.730533177629887" />
+      <entry key="M5" value="19.879982281248445" />
+      <entry key="M10" value="32.10344685164242" />
+      <entry key="M15" value="39.717362235462836" />
+      <entry key="M30" value="53.7916238069982" />
+      <entry key="H1" value="67.8009439008311" />
+      <entry key="H2" value="78.71698139248025" />
+      <entry key="H4" value="85.69675494643238" />
+      <entry key="D1" value="92.512261579913" />
+      <entry key="W1" value="93.78474960129641" />
+    </decayedShown>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 5,
+  &quot;associatedIndex&quot;: 8,
   &quot;fromUser&quot;: false
 }</component>
-  <component name="ProjectId" id="3KxmJHSN0fEYpiN6BmTy3Wimn7w" />
+  <component name="ProjectId" id="3KtPdIgQNjUIuqyC1369h6GCLqR" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Application.Main.executor": "Run",
+    "Application.TableTopVaultApplication.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Sylvia/IdeaProjects/TableTopVault-Group/src/main/resources/edu/utsa/cs3443/tabletopvault/group6/layouts/images",
     "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.jshint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.jshint": "",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "project.propCompiler",
     "to.speed.mode.migration.done": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Sylvia\IdeaProjects\TableTopVault-Group\src\main\resources\edu\utsa\cs3443\tabletopvault\group6\layouts\images" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-30f59d01ecdd-34e2839f716b-intellij.indexing.shared.core-IU-262.9437.185" />
-        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.9437.185" />
+        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.27258.136" />
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.27258.136" />
       </set>
     </attachedChunks>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c1caaed2-6cc3-4484-8521-4ad542217d47" name="Changes" comment="" />
-      <created>1792507520942</created>
+      <changelist id="34378838-7ebd-4b7b-990b-e20a714d9dc2" name="Changes" comment="" />
+      <created>1792373978449</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1792507520942</updated>
+      <updated>1792373978449</updated>
     </task>
+    <task id="LOCAL-00001" summary="Added Colors/fonts">
+      <option name="closed" value="true" />
+      <created>1795212398838</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1795212398838</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="&quot;Finalize prototype milestone CRUD and file I/O persistence&quot;" />
-    <MESSAGE value="Finalize prototype milestone CRUD and file I/O persistence" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finalize prototype milestone CRUD and file I/O persistence" />
+    <MESSAGE value="Made Abstract Class person, made customer and staff extend person" />
+    <MESSAGE value="changed from .txt to csv" />
+    <MESSAGE value="Added Colors/fonts" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Colors/fonts" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

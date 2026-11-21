@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="450.0" prefWidth="815.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.utsa.cs3443.tabletopvault.group6.controller.MainScreenController">
+    <children>
+        <BorderPane fx:id="mainBorderPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <top>
+                <HBox prefHeight="105.0" prefWidth="779.0">
+                    <children>
+                        <ToolBar maxWidth="1.7976931348623157E308" prefHeight="105.0" prefWidth="773.0" style="-fx-background-color: #243e5b;" HBox.hgrow="ALWAYS">
+                            <items>
+                                <ImageView fitHeight="54.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@images/Classic Board Game Icons (1).png" />
+                                    </image>
+                                </ImageView>
+
+                                <Label prefHeight="35.0" prefWidth="244.0" text="TableTop Vault" textFill="WHITE">
+                                    <padding>
+                                        <Insets right="10.0" />
+                                    </padding>
+                                    <font>
+                                        <Font name="Georgia Bold" size="29.0" />
+                                    </font>
+                                </Label>
+                                <MenuButton mnemonicParsing="false" style="-fx-background-color: #f5a802;" text="The Shelf">
+                                    <items>
+                                        <MenuItem onAction="#onFindGamesMenuItemClick" text="Find Games" />
+                                        <MenuItem onAction="#onListGamesMenuItemClick" text="List Games" />
+                                        <MenuItem onAction="#onAddNewGamesMenuItemClick" text="Add Game" />
+                                        <MenuItem onAction="#onUpdateGamesMenuItemClick" text="Update Games" />
+                                        <MenuItem onAction="#onDeleteGamesMenuItemClick" text="Delete Games" />
+                                    </items>
+                           <font>
+                              <Font name="Verdana Bold" size="12.0" />
+                           </font>
+                                </MenuButton>
+                                <MenuButton mnemonicParsing="false" style="-fx-background-color: #f5a802;" text="Customers">
+                                    <items>
+                                        <MenuItem onAction="#onFindCustomersMenuItemClick" text="Find Customer" />
+                                        <MenuItem onAction="#onListCustomersMenuItemClick" text="List Customers" />
+                                        <MenuItem onAction="#onAddNewCustomersMenuItemClick" text="Add Customer" />
+                                        <MenuItem onAction="#onUpdateCustomersMenuItemClick" text="Update Customer" />
+                                        <MenuItem onAction="#onDeleteCustomersMenuItemClick" text="Delete Customers" />
+                                    </items>
+                           <font>
+                              <Font name="Verdana Bold" size="12.0" />
+                           </font>
+                                </MenuButton>
+                                <MenuButton mnemonicParsing="false" style="-fx-background-color: #f5a802;" text="Checkout/In">
+                                    <items>
+                                        <MenuItem onAction="#onCheckoutGameMenuItemClick" text="Checkout Game" />
+                                        <MenuItem onAction="#onCheckinGameMenuItemClick" text="Checkin Game" />
+                                    </items>
+                           <font>
+                              <Font name="Verdana Bold" size="12.0" />
+                           </font>
+                                </MenuButton>
+                                <MenuButton fx:id="logoutMenu" mnemonicParsing="false" style="-fx-background-color: #f5a802;" text="Staff">
+                                    <items>
+                                        <MenuItem onAction="#onLogoutMenuButtonClick" text="Logout" />
+                                    </items>
+                           <font>
+                              <Font name="Verdana Bold" size="12.0" />
+                           </font>
+                                </MenuButton>
+                            </items>
+                        </ToolBar>
+                    </children>
+                </HBox>
+            </top>
+            <center>
+                <AnchorPane prefHeight="345.0" prefWidth="797.0" />
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>

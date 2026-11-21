@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="450.0" prefWidth="815.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.utsa.cs3443.tabletopvault.group6.controller.LoginScreenController">
+
+   <children>
+      <BorderPane fx:id="loginBorderPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+
+         <top>
+            <ToolBar prefHeight="104.0" prefWidth="700.0" style="-fx-background-color: #243e5b;">
+               <items>
+                  <ImageView fitHeight="78.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/Classic Board Game Icons (1).png" />
+                     </image>
+                  </ImageView>
+                  <HBox prefHeight="101.0" prefWidth="467.0">
+                     <children>
+                        <VBox prefHeight="101.0" prefWidth="334.0">
+                           <children>
+                              <Label prefHeight="41.0" prefWidth="609.0" text="TableTop Vault" textFill="#fffefe">
+                                 <font>
+                                    <Font name="Georgia Bold" size="36.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets right="10.0" />
+                                 </padding>
+                                 <effect>
+                                    <DropShadow blurType="TWO_PASS_BOX" />
+                                 </effect>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </Label>
+                              <Label prefHeight="27.0" prefWidth="258.0" text="Board Game Rental Library" textFill="#fbf7f7">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="Verdana" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+
+                        <VBox prefHeight="101.0" prefWidth="203.0" spacing="5.0">
+                     <children>
+                        <TextField fx:id="usernameTextField" prefHeight="24.0" prefWidth="169.0" promptText="1234">
+                           <VBox.margin>
+                              <Insets left="10.0" top="5.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="Verdana" size="12.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets top="2.0" />
+                           </opaqueInsets>
+                        </TextField>
+
+                              <PasswordField fx:id="passwordTextField" promptText="1234">
+                           <VBox.margin>
+                              <Insets left="10.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="Verdana" size="12.0" />
+                           </font>
+                        </PasswordField>
+
+                              <Button fx:id="loginButton" onAction="#onLoginButtonClick" style="-fx-background-color: #f5a802;" text="Staff Login">
+                           <VBox.margin>
+                              <Insets left="65.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="Verdana Bold" size="12.0" />
+                           </font>
+                        </Button>
+
+                              <Label fx:id="loginIndicatorLabel" textFill="red" />
+                     </children>
+                     <opaqueInsets>
+                        <Insets top="2.0" />
+                     </opaqueInsets>
+                  </VBox>
+               </items>
+               <effect>
+                  <ColorAdjust />
+               </effect>
+            </ToolBar>
+         </top>
+
+         <center>
+            <AnchorPane prefHeight="395.0" prefWidth="400.0" />
+         </center>
+
+      </BorderPane>
+   </children>
+</AnchorPane>
